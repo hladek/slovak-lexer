@@ -3,7 +3,7 @@
 
 #include "btree.h"
 #ifdef LIBUV_FOUND
-#include "UvPrefork.h"
+#include "TCPFork.h"
 #endif
 #include "AnnotatorLexer.h"
 #include "UTokenizer.h"
@@ -228,7 +228,7 @@ int main(int argc, char **argv) {
 #ifdef LIBUV_FOUND
 	if (porta.isValid) {
 		cout << "Loaded " << r.rules.size() << endl;
-        return TCPForking::listen(porta.value,&r);
+        return TCPFork::start(&r,porta.value);
 	}
 	else{
 #endif

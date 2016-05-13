@@ -15,7 +15,7 @@
 #include "btree.h"
 #include <sstream>
 
-#include "UvPrefork.h"
+#include "TCPFork.h"
 
 static void readpos(const LString& pos, int& rod, int& cislo,
 			int& pad) {
@@ -251,7 +251,7 @@ int main(int argc, char **argv) {
 	}
 	if (porta.isValid) {
 		cout << "Loaded " << r.rules.size() << endl;
-        return TCPForking::listen(porta.value,&r);
+        return TCPFork::start(&r,porta.value);
 	}
 	else{
 		LineTokenizer lt(cin);

@@ -4,7 +4,7 @@
 #include "Vocab3.h"
 #include "SlovakLexer.h"
 #ifdef LIBUV_FOUND
-#include "UvPrefork.h"
+#include "TCPFork.h"
 #endif
 
 class LexerTokenizer: public Lexer2 
@@ -148,7 +148,7 @@ int main(int argc, char **argv) {
     LexerTokenizer ltok(vocab);
 #ifdef LIBUV_FOUND
     if (porta.isValid){
-        return TCPForking::listen(porta.value,&ltok);
+        return TCPFork::start(&ltok, porta.value);
     }
     else
 #endif
