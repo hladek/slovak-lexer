@@ -3,12 +3,12 @@
 #include "Command.h"
 #include "Vocab3.h"
 #include "SlovakLexer.h"
-#ifdef LIBUV_FOUND
+#ifdef NETWORKING_ENABLED
 #include "TCPFork.h"
 #endif
 
 class LexerTokenizer: public Lexer2 
-#ifdef LIBUV_FOUND
+#ifdef NETWORKING_ENABLED
                       ,public Annotator
 #endif
 {
@@ -55,7 +55,8 @@ public:
 	}
 	virtual ~LexerTokenizer(){};
 
-    virtual void annotate(LString chunk,ostream& os){
+    virtual void annotate(char* instr,size_t sz,ostream& os){
+        LString chunk(instr,sz);
         if (chunk.size() > 4){
             if ((chunk[0] == 'i' && chunk[1] == '\t') || chunk == "--endtext"){
                 os << chunk << endl;
@@ -146,7 +147,7 @@ int main(int argc, char **argv) {
     }
 
     LexerTokenizer ltok(vocab);
-#ifdef LIBUV_FOUND
+#ifdef NETWORKING_ENABLED
     if (porta.isValid){
         return TCPFork::start(&ltok, porta.value);
     }
@@ -156,17 +157,14 @@ int main(int argc, char **argv) {
         ifstream of(filea.arg.start());
         LineTokenizer lt(of);
         while(lt.next()){
-            ltok.annotate(lt.token(),cout);
+            ltok.annotate(lt.token().start(),lt.token().size(),cout);
         }
     }
     else {
         LineTokenizer lt(cin);
         while(lt.next()){
-            ltok.annotate(lt.token(),cout);
+            ltok.annotate(lt.token().start(),lt.token().size(),cout);
         }
     }
-        
-
-	
 }
 

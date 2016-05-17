@@ -1,5 +1,5 @@
 
-#line 1 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 1 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 /*
  * 
  *
@@ -14,11 +14,11 @@
 #include "UTokenizer.h"
 
 
-#line 110 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 110 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 
 
 
-#line 22 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h"
+#line 22 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
 static const char _slovakparser_actions[] = {
 	0, 1, 0, 1, 1, 1, 2, 1, 
 	38, 1, 39, 1, 40, 1, 41, 1, 
@@ -4142,7 +4142,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	145u, 147u, 149u, 151u, 153u, 155u, 157u, 159u, 
 	161u, 163u, 161u, 255u, 136u, 255u, 180u, 181u, 
 	182u, 186u, 187u, 188u, 189u, 190u, 191u, 184u, 
-	185u, 0u, 127u, 192u, 255u, 129u, 131u, 133u, 
+	185u, 128u, 255u, 192u, 255u, 129u, 131u, 133u, 
 	135u, 137u, 139u, 141u, 143u, 145u, 147u, 149u, 
 	151u, 153u, 155u, 157u, 159u, 161u, 163u, 165u, 
 	167u, 169u, 171u, 173u, 175u, 177u, 179u, 181u, 
@@ -6490,7 +6490,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	161u, 163u, 128u, 162u, 177u, 255u, 151u, 160u, 
 	161u, 255u, 136u, 255u, 130u, 131u, 180u, 181u, 
 	182u, 186u, 187u, 188u, 189u, 190u, 191u, 184u, 
-	185u, 128u, 255u, 192u, 255u, 129u, 131u, 133u, 
+	185u, 0u, 127u, 192u, 255u, 129u, 131u, 133u, 
 	135u, 137u, 139u, 141u, 143u, 145u, 147u, 149u, 
 	151u, 153u, 155u, 157u, 159u, 161u, 163u, 165u, 
 	167u, 169u, 171u, 173u, 175u, 177u, 179u, 181u, 
@@ -7351,7 +7351,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	208u, 209u, 210u, 211u, 212u, 213u, 214u, 225u, 
 	226u, 234u, 239u, 240u, 65u, 90u, 97u, 122u, 
 	197u, 200u, 187u, 192u, 255u, 132u, 134u, 135u, 
-	137u, 138u, 140u, 177u, 179u, 191u, 0u, 127u, 
+	137u, 138u, 140u, 177u, 179u, 191u, 128u, 255u, 
 	148u, 185u, 255u, 128u, 129u, 160u, 164u, 133u, 
 	176u, 179u, 182u, 183u, 186u, 189u, 134u, 140u, 
 	136u, 138u, 142u, 161u, 163u, 255u, 182u, 192u, 
@@ -7573,7 +7573,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	214u, 225u, 226u, 234u, 239u, 240u, 65u, 90u, 
 	97u, 122u, 197u, 200u, 187u, 192u, 255u, 132u, 
 	134u, 135u, 137u, 138u, 140u, 177u, 179u, 191u, 
-	128u, 255u, 148u, 185u, 255u, 128u, 129u, 160u, 
+	0u, 127u, 148u, 185u, 255u, 128u, 129u, 160u, 
 	164u, 133u, 176u, 179u, 182u, 183u, 186u, 189u, 
 	134u, 140u, 136u, 138u, 142u, 161u, 163u, 255u, 
 	182u, 192u, 255u, 128u, 129u, 138u, 191u, 128u, 
@@ -7952,7 +7952,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	225u, 226u, 234u, 239u, 240u, 43u, 45u, 65u, 
 	90u, 97u, 122u, 197u, 200u, 170u, 181u, 186u, 
 	128u, 150u, 152u, 182u, 184u, 191u, 128u, 191u, 
-	128u, 255u, 187u, 192u, 255u, 132u, 134u, 135u, 
+	0u, 127u, 187u, 192u, 255u, 132u, 134u, 135u, 
 	137u, 138u, 140u, 177u, 179u, 191u, 148u, 185u, 
 	255u, 128u, 129u, 160u, 164u, 133u, 176u, 179u, 
 	182u, 183u, 186u, 189u, 134u, 140u, 136u, 138u, 
@@ -8339,7 +8339,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	144u, 146u, 255u, 166u, 167u, 129u, 155u, 187u, 
 	149u, 181u, 143u, 175u, 137u, 169u, 131u, 140u, 
 	255u, 170u, 181u, 186u, 128u, 150u, 152u, 182u, 
-	184u, 191u, 128u, 191u, 0u, 127u, 187u, 192u, 
+	184u, 191u, 128u, 191u, 128u, 255u, 187u, 192u, 
 	255u, 132u, 134u, 135u, 137u, 138u, 140u, 177u, 
 	179u, 191u, 148u, 185u, 255u, 128u, 129u, 160u, 
 	164u, 133u, 176u, 179u, 182u, 183u, 186u, 189u, 
@@ -8864,7 +8864,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	197u, 200u, 170u, 181u, 186u, 128u, 150u, 152u, 
 	182u, 184u, 191u, 128u, 191u, 161u, 128u, 255u, 
 	187u, 192u, 255u, 132u, 134u, 135u, 137u, 138u, 
-	140u, 177u, 179u, 191u, 0u, 127u, 148u, 185u, 
+	140u, 177u, 179u, 191u, 128u, 255u, 148u, 185u, 
 	255u, 128u, 129u, 160u, 164u, 133u, 176u, 179u, 
 	182u, 183u, 186u, 189u, 134u, 140u, 136u, 138u, 
 	142u, 161u, 163u, 255u, 182u, 192u, 255u, 128u, 
@@ -9011,7 +9011,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	163u, 128u, 162u, 177u, 255u, 151u, 160u, 161u, 
 	255u, 136u, 255u, 130u, 131u, 180u, 181u, 182u, 
 	186u, 187u, 188u, 189u, 190u, 191u, 184u, 185u, 
-	128u, 255u, 192u, 255u, 129u, 131u, 133u, 135u, 
+	0u, 127u, 192u, 255u, 129u, 131u, 133u, 135u, 
 	137u, 139u, 141u, 143u, 145u, 147u, 149u, 151u, 
 	153u, 155u, 157u, 159u, 161u, 163u, 165u, 167u, 
 	169u, 171u, 173u, 175u, 177u, 179u, 181u, 183u, 
@@ -9231,7 +9231,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	159u, 161u, 163u, 128u, 162u, 177u, 255u, 151u, 
 	160u, 161u, 255u, 136u, 255u, 130u, 131u, 180u, 
 	181u, 182u, 186u, 187u, 188u, 189u, 190u, 191u, 
-	184u, 185u, 0u, 127u, 192u, 255u, 129u, 131u, 
+	184u, 185u, 128u, 255u, 192u, 255u, 129u, 131u, 
 	133u, 135u, 137u, 139u, 141u, 143u, 145u, 147u, 
 	149u, 151u, 153u, 155u, 157u, 159u, 161u, 163u, 
 	165u, 167u, 169u, 171u, 173u, 175u, 177u, 179u, 
@@ -9816,8 +9816,8 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	133u, 135u, 137u, 139u, 141u, 143u, 145u, 147u, 
 	149u, 151u, 153u, 155u, 157u, 159u, 161u, 163u, 
 	161u, 255u, 136u, 255u, 180u, 181u, 182u, 186u, 
-	187u, 188u, 189u, 190u, 191u, 184u, 185u, 0u, 
-	127u, 192u, 255u, 129u, 131u, 133u, 135u, 137u, 
+	187u, 188u, 189u, 190u, 191u, 184u, 185u, 128u, 
+	255u, 192u, 255u, 129u, 131u, 133u, 135u, 137u, 
 	139u, 141u, 143u, 145u, 147u, 149u, 151u, 153u, 
 	155u, 157u, 159u, 161u, 163u, 165u, 167u, 169u, 
 	171u, 173u, 175u, 177u, 179u, 181u, 183u, 185u, 
@@ -10579,8 +10579,8 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	133u, 135u, 137u, 139u, 141u, 143u, 145u, 147u, 
 	149u, 151u, 153u, 155u, 157u, 159u, 161u, 163u, 
 	161u, 255u, 136u, 255u, 180u, 181u, 182u, 186u, 
-	187u, 188u, 189u, 190u, 191u, 184u, 185u, 128u, 
-	255u, 192u, 255u, 129u, 131u, 133u, 135u, 137u, 
+	187u, 188u, 189u, 190u, 191u, 184u, 185u, 0u, 
+	127u, 192u, 255u, 129u, 131u, 133u, 135u, 137u, 
 	139u, 141u, 143u, 145u, 147u, 149u, 151u, 153u, 
 	155u, 157u, 159u, 161u, 163u, 165u, 167u, 169u, 
 	171u, 173u, 175u, 177u, 179u, 181u, 183u, 185u, 
@@ -10746,7 +10746,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	135u, 137u, 139u, 141u, 143u, 145u, 147u, 149u, 
 	151u, 153u, 155u, 157u, 159u, 161u, 163u, 161u, 
 	255u, 136u, 255u, 180u, 181u, 182u, 186u, 187u, 
-	188u, 189u, 190u, 191u, 184u, 185u, 128u, 255u, 
+	188u, 189u, 190u, 191u, 184u, 185u, 0u, 127u, 
 	192u, 255u, 129u, 131u, 133u, 135u, 137u, 139u, 
 	141u, 143u, 145u, 147u, 149u, 151u, 153u, 155u, 
 	157u, 159u, 161u, 163u, 165u, 167u, 169u, 171u, 
@@ -12112,8 +12112,8 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	109u, 111u, 112u, 115u, 116u, 197u, 48u, 57u, 
 	161u, 101u, 116u, 115u, 114u, 121u, 114u, 105u, 
 	173u, 115u, 108u, 111u, 170u, 181u, 186u, 128u, 
-	150u, 152u, 182u, 184u, 191u, 128u, 191u, 0u, 
-	127u, 187u, 192u, 255u, 132u, 134u, 135u, 137u, 
+	150u, 152u, 182u, 184u, 191u, 128u, 191u, 128u, 
+	255u, 187u, 192u, 255u, 132u, 134u, 135u, 137u, 
 	138u, 140u, 177u, 179u, 191u, 148u, 185u, 255u, 
 	128u, 129u, 160u, 164u, 133u, 176u, 179u, 182u, 
 	183u, 186u, 189u, 134u, 140u, 136u, 138u, 142u, 
@@ -12904,7 +12904,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	211u, 212u, 213u, 214u, 225u, 226u, 234u, 239u, 
 	240u, 65u, 90u, 97u, 122u, 197u, 200u, 187u, 
 	192u, 255u, 132u, 134u, 135u, 137u, 138u, 140u, 
-	177u, 179u, 191u, 128u, 255u, 148u, 185u, 255u, 
+	177u, 179u, 191u, 0u, 127u, 148u, 185u, 255u, 
 	128u, 129u, 160u, 164u, 133u, 176u, 179u, 182u, 
 	183u, 186u, 189u, 134u, 140u, 136u, 138u, 142u, 
 	161u, 163u, 255u, 182u, 192u, 255u, 128u, 129u, 
@@ -12936,7 +12936,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	255u, 166u, 167u, 129u, 155u, 187u, 149u, 181u, 
 	143u, 175u, 137u, 169u, 131u, 140u, 255u, 170u, 
 	181u, 186u, 128u, 150u, 152u, 182u, 184u, 191u, 
-	128u, 191u, 128u, 255u, 187u, 192u, 255u, 132u, 
+	128u, 191u, 0u, 127u, 187u, 192u, 255u, 132u, 
 	134u, 135u, 137u, 138u, 140u, 177u, 179u, 191u, 
 	148u, 185u, 255u, 128u, 129u, 160u, 164u, 133u, 
 	176u, 179u, 182u, 183u, 186u, 189u, 134u, 140u, 
@@ -13125,7 +13125,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	209u, 210u, 211u, 212u, 213u, 214u, 225u, 226u, 
 	234u, 239u, 240u, 65u, 90u, 97u, 122u, 197u, 
 	200u, 187u, 192u, 255u, 132u, 134u, 135u, 137u, 
-	138u, 140u, 177u, 179u, 191u, 128u, 255u, 148u, 
+	138u, 140u, 177u, 179u, 191u, 0u, 127u, 148u, 
 	185u, 255u, 128u, 129u, 160u, 164u, 133u, 176u, 
 	179u, 182u, 183u, 186u, 189u, 134u, 140u, 136u, 
 	138u, 142u, 161u, 163u, 255u, 182u, 192u, 255u, 
@@ -13157,7 +13157,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	144u, 146u, 255u, 166u, 167u, 129u, 155u, 187u, 
 	149u, 181u, 143u, 175u, 137u, 169u, 131u, 140u, 
 	255u, 170u, 181u, 186u, 128u, 150u, 152u, 182u, 
-	184u, 191u, 128u, 191u, 128u, 255u, 187u, 192u, 
+	184u, 191u, 128u, 191u, 0u, 127u, 187u, 192u, 
 	255u, 132u, 134u, 135u, 137u, 138u, 140u, 177u, 
 	179u, 191u, 148u, 185u, 255u, 128u, 129u, 160u, 
 	164u, 133u, 176u, 179u, 182u, 183u, 186u, 189u, 
@@ -14258,7 +14258,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	212u, 213u, 214u, 225u, 226u, 234u, 239u, 240u, 
 	65u, 90u, 97u, 122u, 197u, 200u, 187u, 192u, 
 	255u, 132u, 134u, 135u, 137u, 138u, 140u, 177u, 
-	179u, 191u, 128u, 255u, 148u, 185u, 255u, 128u, 
+	179u, 191u, 0u, 127u, 148u, 185u, 255u, 128u, 
 	129u, 160u, 164u, 133u, 176u, 179u, 182u, 183u, 
 	186u, 189u, 134u, 140u, 136u, 138u, 142u, 161u, 
 	163u, 255u, 182u, 192u, 255u, 128u, 129u, 138u, 
@@ -14527,7 +14527,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	214u, 225u, 226u, 234u, 239u, 240u, 65u, 90u, 
 	97u, 122u, 197u, 200u, 187u, 192u, 255u, 132u, 
 	134u, 135u, 137u, 138u, 140u, 177u, 179u, 191u, 
-	0u, 127u, 148u, 185u, 255u, 128u, 129u, 160u, 
+	128u, 255u, 148u, 185u, 255u, 128u, 129u, 160u, 
 	164u, 133u, 176u, 179u, 182u, 183u, 186u, 189u, 
 	134u, 140u, 136u, 138u, 142u, 161u, 163u, 255u, 
 	182u, 192u, 255u, 128u, 129u, 138u, 191u, 128u, 
@@ -14865,7 +14865,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	145u, 147u, 149u, 151u, 153u, 155u, 157u, 159u, 
 	161u, 163u, 161u, 255u, 136u, 255u, 180u, 181u, 
 	182u, 186u, 187u, 188u, 189u, 190u, 191u, 184u, 
-	185u, 128u, 255u, 192u, 255u, 129u, 131u, 133u, 
+	185u, 0u, 127u, 192u, 255u, 129u, 131u, 133u, 
 	135u, 137u, 139u, 141u, 143u, 145u, 147u, 149u, 
 	151u, 153u, 155u, 157u, 159u, 161u, 163u, 165u, 
 	167u, 169u, 171u, 173u, 175u, 177u, 179u, 181u, 
@@ -15198,8 +15198,8 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	133u, 135u, 137u, 139u, 141u, 143u, 145u, 147u, 
 	149u, 151u, 153u, 155u, 157u, 159u, 161u, 163u, 
 	161u, 255u, 136u, 255u, 180u, 181u, 182u, 186u, 
-	187u, 188u, 189u, 190u, 191u, 184u, 185u, 0u, 
-	127u, 192u, 255u, 129u, 131u, 133u, 135u, 137u, 
+	187u, 188u, 189u, 190u, 191u, 184u, 185u, 128u, 
+	255u, 192u, 255u, 129u, 131u, 133u, 135u, 137u, 
 	139u, 141u, 143u, 145u, 147u, 149u, 151u, 153u, 
 	155u, 157u, 159u, 161u, 163u, 165u, 167u, 169u, 
 	171u, 173u, 175u, 177u, 179u, 181u, 183u, 185u, 
@@ -26380,7 +26380,7 @@ static const short _slovakparser_indicies[] = {
 	1891, 1891, 1891, 1891, 1891, 1891, 1891, 1891, 
 	1891, 1867, 1891, 1867, 1867, 1891, 2053, 2054, 
 	2055, 2057, 2058, 2059, 2060, 2061, 2062, 2056, 
-	1867, 1867, 1891, 1891, 1867, 1891, 1891, 1891, 
+	1867, 1891, 1867, 1891, 1867, 1891, 1891, 1891, 
 	1891, 1891, 1891, 1891, 1891, 1891, 1891, 1891, 
 	1891, 1891, 1891, 1891, 1891, 1891, 1891, 1891, 
 	1891, 1891, 1891, 1891, 1891, 1891, 1891, 1891, 
@@ -28564,7 +28564,7 @@ static const short _slovakparser_indicies[] = {
 	3200, 3200, 3200, 3200, 3200, 3200, 3200, 3200, 
 	3200, 1455, 1455, 3123, 3123, 3200, 1455, 3123, 
 	3200, 1542, 1543, 3226, 3227, 3228, 3230, 3231, 
-	3232, 3233, 3234, 3235, 3229, 3123, 3200, 3123, 
+	3232, 3233, 3234, 3235, 3229, 3123, 3123, 3200, 
 	3200, 3123, 3200, 3200, 3200, 3200, 3200, 3200, 
 	3200, 3200, 3200, 3200, 3200, 3200, 3200, 3200, 
 	3200, 3200, 3200, 3200, 3200, 3200, 3200, 3200, 
@@ -29352,7 +29352,7 @@ static const short _slovakparser_indicies[] = {
 	3650, 3651, 3652, 3647, 3653, 3654, 3643, 3655, 
 	3656, 3657, 3658, 3659, 3660, 3661, 3662, 3640, 
 	3640, 3644, 0, 0, 0, 3608, 3608, 3608, 
-	3608, 3608, 3608, 0, 0, 3608, 3608, 0, 
+	3608, 3608, 3608, 0, 3608, 0, 3608, 0, 
 	0, 3608, 3608, 3608, 0, 3608, 3608, 3608, 
 	3608, 0, 3608, 3608, 3608, 3608, 3608, 0, 
 	0, 3608, 0, 3608, 3608, 3608, 0, 3608, 
@@ -29556,7 +29556,7 @@ static const short _slovakparser_indicies[] = {
 	3592, 3593, 3594, 3595, 3596, 3591, 3597, 3598, 
 	3587, 3599, 3600, 3601, 3602, 3603, 3604, 3605, 
 	3606, 3584, 3584, 3588, 0, 0, 0, 3552, 
-	3552, 3552, 3552, 3552, 3552, 0, 3552, 0, 
+	3552, 3552, 3552, 3552, 3552, 0, 0, 3552, 
 	3552, 0, 0, 3552, 3552, 3552, 0, 3552, 
 	3552, 3552, 3552, 0, 3552, 3552, 3552, 3552, 
 	3552, 0, 0, 3552, 0, 3552, 3552, 3552, 
@@ -29902,8 +29902,8 @@ static const short _slovakparser_indicies[] = {
 	1471, 1472, 1473, 1474, 1469, 1475, 1476, 1464, 
 	1477, 1478, 1479, 1480, 1481, 1482, 1483, 1484, 
 	1455, 1455, 1455, 1468, 212, 4188, 4188, 4188, 
-	212, 4188, 4188, 4188, 212, 4188, 212, 4188, 
-	212, 212, 212, 4188, 4188, 4188, 4188, 4188, 
+	212, 4188, 4188, 4188, 212, 4188, 212, 212, 
+	4188, 212, 212, 4188, 4188, 4188, 4188, 4188, 
 	4188, 212, 4188, 212, 212, 4188, 4188, 4188, 
 	212, 4188, 4188, 4188, 4188, 212, 4188, 4188, 
 	4188, 4188, 4188, 212, 212, 4188, 212, 4188, 
@@ -30255,7 +30255,7 @@ static const short _slovakparser_indicies[] = {
 	4151, 212, 212, 4151, 212, 212, 212, 4151, 
 	212, 212, 4151, 212, 212, 4151, 212, 212, 
 	4151, 212, 212, 4151, 4127, 4127, 4127, 212, 
-	4127, 4127, 4127, 212, 4127, 212, 212, 4127, 
+	4127, 4127, 4127, 212, 4127, 212, 4127, 212, 
 	212, 212, 4127, 4127, 4127, 4127, 4127, 4127, 
 	212, 4127, 212, 212, 4127, 4127, 4127, 212, 
 	4127, 4127, 4127, 4127, 212, 4127, 4127, 4127, 
@@ -30734,7 +30734,7 @@ static const short _slovakparser_indicies[] = {
 	4131, 0, 4036, 4036, 4036, 0, 4036, 4036, 
 	4036, 0, 4036, 0, 4041, 4036, 0, 0, 
 	0, 4036, 4036, 4036, 4036, 4036, 4036, 0, 
-	0, 4036, 4036, 0, 0, 4036, 4036, 4036, 
+	4036, 0, 4036, 0, 0, 4036, 4036, 4036, 
 	0, 4036, 4036, 4036, 4036, 0, 4036, 4036, 
 	4036, 4036, 4036, 0, 0, 4036, 0, 4036, 
 	4036, 4036, 0, 4036, 4036, 0, 0, 4036, 
@@ -30868,8 +30868,8 @@ static const short _slovakparser_indicies[] = {
 	4812, 4812, 4812, 4812, 4812, 4812, 4812, 4812, 
 	4812, 4812, 1455, 1455, 4735, 4735, 4812, 1455, 
 	4735, 4812, 1542, 1543, 4838, 4839, 4840, 4842, 
-	4843, 4844, 4845, 4846, 4847, 4841, 4735, 4812, 
-	4735, 4812, 4735, 4812, 4812, 4812, 4812, 4812, 
+	4843, 4844, 4845, 4846, 4847, 4841, 4735, 4735, 
+	4812, 4812, 4735, 4812, 4812, 4812, 4812, 4812, 
 	4812, 4812, 4812, 4812, 4812, 4812, 4812, 4812, 
 	4812, 4812, 4812, 4812, 4812, 4812, 4812, 4812, 
 	4812, 4812, 4812, 4812, 4812, 4812, 4812, 4812, 
@@ -31066,7 +31066,7 @@ static const short _slovakparser_indicies[] = {
 	4761, 4761, 4761, 4761, 4761, 4761, 4761, 1424, 
 	1424, 4735, 4735, 4761, 1424, 4735, 4761, 1600, 
 	1601, 4929, 4930, 4931, 4933, 4934, 4935, 4936, 
-	4937, 4938, 4932, 4735, 4735, 4761, 4761, 4735, 
+	4937, 4938, 4932, 4735, 4761, 4735, 4761, 4735, 
 	4761, 4761, 4761, 4761, 4761, 4761, 4761, 4761, 
 	4761, 4761, 4761, 4761, 4761, 4761, 4761, 4761, 
 	4761, 4761, 4761, 4761, 4761, 4761, 4761, 4761, 
@@ -31606,7 +31606,7 @@ static const short _slovakparser_indicies[] = {
 	5332, 5332, 5332, 5332, 5332, 5332, 5332, 5332, 
 	5332, 5332, 5332, 5332, 5332, 5332, 212, 5332, 
 	212, 212, 5332, 5358, 5359, 5360, 5362, 5363, 
-	5364, 5365, 5366, 5367, 5361, 212, 212, 5332, 
+	5364, 5365, 5366, 5367, 5361, 212, 5332, 212, 
 	5332, 212, 5332, 5332, 5332, 5332, 5332, 5332, 
 	5332, 5332, 5332, 5332, 5332, 5332, 5332, 5332, 
 	5332, 5332, 5332, 5332, 5332, 5332, 5332, 5332, 
@@ -32339,7 +32339,7 @@ static const short _slovakparser_indicies[] = {
 	5903, 5903, 5903, 5903, 5903, 5903, 5903, 5903, 
 	5903, 5903, 212, 5903, 212, 212, 5903, 5929, 
 	5930, 5931, 5933, 5934, 5935, 5936, 5937, 5938, 
-	5932, 212, 5903, 212, 5903, 212, 5903, 5903, 
+	5932, 212, 212, 5903, 5903, 212, 5903, 5903, 
 	5903, 5903, 5903, 5903, 5903, 5903, 5903, 5903, 
 	5903, 5903, 5903, 5903, 5903, 5903, 5903, 5903, 
 	5903, 5903, 5903, 5903, 5903, 5903, 5903, 5903, 
@@ -32498,7 +32498,7 @@ static const short _slovakparser_indicies[] = {
 	5854, 5854, 5854, 5854, 5854, 5854, 5854, 5854, 
 	5854, 5854, 5854, 0, 5854, 0, 0, 5854, 
 	6016, 6017, 6018, 6020, 6021, 6022, 6023, 6024, 
-	6025, 6019, 0, 5854, 0, 5854, 0, 5854, 
+	6025, 6019, 0, 0, 5854, 5854, 0, 5854, 
 	5854, 5854, 5854, 5854, 5854, 5854, 5854, 5854, 
 	5854, 5854, 5854, 5854, 5854, 5854, 5854, 5854, 
 	5854, 5854, 5854, 5854, 5854, 5854, 5854, 5854, 
@@ -33817,7 +33817,7 @@ static const short _slovakparser_indicies[] = {
 	212, 7152, 7192, 212, 7193, 212, 7194, 212, 
 	7195, 212, 7196, 212, 7197, 212, 7186, 212, 
 	7111, 7111, 7111, 212, 7111, 7111, 7111, 212, 
-	7111, 212, 212, 7111, 212, 212, 7111, 7111, 
+	7111, 212, 7111, 212, 212, 212, 7111, 7111, 
 	7111, 7111, 7111, 7111, 212, 7111, 212, 212, 
 	7111, 7111, 7111, 212, 7111, 7111, 7111, 7111, 
 	212, 7111, 7111, 7111, 7111, 7111, 212, 212, 
@@ -34556,7 +34556,7 @@ static const short _slovakparser_indicies[] = {
 	7672, 7667, 7673, 7674, 7663, 7675, 7676, 7677, 
 	7678, 7679, 7680, 7681, 7682, 7660, 7660, 7664, 
 	0, 212, 212, 7628, 7628, 7628, 7628, 7628, 
-	7628, 212, 7628, 212, 7628, 212, 212, 7628, 
+	7628, 212, 212, 7628, 7628, 212, 212, 7628, 
 	7628, 7628, 212, 7628, 7628, 7628, 7628, 212, 
 	7628, 7628, 7628, 7628, 7628, 212, 212, 7628, 
 	212, 7628, 7628, 7628, 212, 7628, 212, 7628, 
@@ -34585,7 +34585,7 @@ static const short _slovakparser_indicies[] = {
 	212, 212, 212, 7628, 212, 212, 7628, 212, 
 	212, 7628, 212, 212, 7628, 212, 212, 7628, 
 	7604, 7604, 7604, 0, 7604, 7604, 7604, 0, 
-	7604, 0, 7604, 0, 0, 0, 7604, 7604, 
+	7604, 0, 0, 7604, 0, 0, 7604, 7604, 
 	7604, 7604, 7604, 7604, 0, 7604, 0, 0, 
 	7604, 7604, 7604, 0, 7604, 7604, 7604, 7604, 
 	0, 7604, 7604, 7604, 7604, 7604, 0, 0, 
@@ -34760,7 +34760,7 @@ static const short _slovakparser_indicies[] = {
 	7614, 7615, 7616, 7611, 7617, 7618, 7607, 7619, 
 	7620, 7621, 7622, 7623, 7624, 7625, 7626, 7604, 
 	7604, 7608, 0, 0, 0, 7572, 7572, 7572, 
-	7572, 7572, 7572, 0, 7572, 0, 7572, 0, 
+	7572, 7572, 7572, 0, 0, 7572, 7572, 0, 
 	0, 7572, 7572, 7572, 0, 7572, 7572, 7572, 
 	7572, 0, 7572, 7572, 7572, 7572, 7572, 0, 
 	0, 7572, 0, 7572, 7572, 7572, 0, 7572, 
@@ -34789,7 +34789,7 @@ static const short _slovakparser_indicies[] = {
 	0, 7572, 0, 0, 0, 7572, 0, 0, 
 	7572, 0, 0, 7572, 0, 0, 7572, 0, 
 	0, 7572, 7547, 7547, 7547, 0, 7547, 7547, 
-	7547, 0, 7547, 0, 7547, 0, 0, 0, 
+	7547, 0, 7547, 0, 0, 7547, 0, 0, 
 	7547, 7547, 7547, 7547, 7547, 7547, 0, 7547, 
 	0, 0, 7547, 7547, 7547, 0, 7547, 7547, 
 	7547, 7547, 0, 7547, 7547, 7547, 7547, 7547, 
@@ -35830,8 +35830,8 @@ static const short _slovakparser_indicies[] = {
 	8690, 8691, 8692, 8693, 8694, 8695, 8690, 8696, 
 	8697, 8686, 8698, 8699, 8700, 8701, 8702, 8703, 
 	8704, 8705, 8683, 8683, 8687, 212, 212, 212, 
-	8651, 8651, 8651, 8651, 8651, 8651, 212, 8651, 
-	212, 8651, 212, 212, 8651, 8651, 8651, 212, 
+	8651, 8651, 8651, 8651, 8651, 8651, 212, 212, 
+	8651, 8651, 212, 212, 8651, 8651, 8651, 212, 
 	8651, 8651, 8651, 8651, 212, 8651, 8651, 8651, 
 	8651, 8651, 212, 212, 8651, 212, 8651, 8651, 
 	8651, 212, 8651, 212, 8651, 8651, 212, 212, 
@@ -36079,7 +36079,7 @@ static const short _slovakparser_indicies[] = {
 	8637, 8638, 8639, 8634, 8640, 8641, 8630, 8642, 
 	8643, 8644, 8645, 8646, 8647, 8648, 8649, 8627, 
 	8627, 8631, 212, 212, 212, 8595, 8595, 8595, 
-	8595, 8595, 8595, 212, 212, 8595, 8595, 212, 
+	8595, 8595, 8595, 212, 8595, 212, 8595, 212, 
 	212, 8595, 8595, 8595, 212, 8595, 8595, 8595, 
 	8595, 212, 8595, 8595, 8595, 8595, 8595, 212, 
 	212, 8595, 212, 8595, 8595, 8595, 212, 8595, 
@@ -36393,8 +36393,8 @@ static const short _slovakparser_indicies[] = {
 	9322, 9322, 9322, 9322, 9322, 9322, 9322, 9322, 
 	9322, 9322, 9322, 9322, 9322, 9322, 9322, 9249, 
 	9322, 9249, 9249, 9322, 9348, 9349, 9350, 9352, 
-	9353, 9354, 9355, 9356, 9357, 9351, 9249, 9322, 
-	9249, 9322, 9249, 9322, 9322, 9322, 9322, 9322, 
+	9353, 9354, 9355, 9356, 9357, 9351, 9249, 9249, 
+	9322, 9322, 9249, 9322, 9322, 9322, 9322, 9322, 
 	9322, 9322, 9322, 9322, 9322, 9322, 9322, 9322, 
 	9322, 9322, 9322, 9322, 9322, 9322, 9322, 9322, 
 	9322, 9322, 9322, 9322, 9322, 9322, 9322, 9322, 
@@ -36712,7 +36712,7 @@ static const short _slovakparser_indicies[] = {
 	9223, 9223, 9223, 9223, 9223, 9223, 9223, 9223, 
 	9223, 212, 9223, 212, 212, 9223, 9522, 9523, 
 	9524, 9526, 9527, 9528, 9529, 9530, 9531, 9525, 
-	212, 212, 9223, 9223, 212, 9223, 9223, 9223, 
+	212, 9223, 212, 9223, 212, 9223, 9223, 9223, 
 	9223, 9223, 9223, 9223, 9223, 9223, 9223, 9223, 
 	9223, 9223, 9223, 9223, 9223, 9223, 9223, 9223, 
 	9223, 9223, 9223, 9223, 9223, 9223, 9223, 9223, 
@@ -48313,14 +48313,14 @@ static const int slovakparser_error = -1;
 static const int slovakparser_en_main = 11869;
 
 
-#line 113 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 113 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 
 class AnnotationLexer : public RagelProcessor{
 
 public:
 	AnnotationLexer() {
 		
-#line 48324 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h"
+#line 48324 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
 	{
 	cs = slovakparser_start;
 	ts = 0;
@@ -48328,7 +48328,7 @@ public:
 	act = 0;
 	}
 
-#line 119 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 119 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	}
 	
 	
@@ -48454,7 +48454,7 @@ public:
 		
 	virtual void call_ragel(ostream& out){
 		
-#line 48458 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h"
+#line 48458 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
 	{
 	int _klen;
 	unsigned int _trans;
@@ -48473,7 +48473,7 @@ _resume:
 #line 1 "NONE"
 	{ts = p;}
 	break;
-#line 48477 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h"
+#line 48477 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
 		}
 	}
 
@@ -48544,461 +48544,461 @@ _eof_trans:
 	{te = p+1;}
 	break;
 	case 3:
-#line 40 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 40 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 1;}
 	break;
 	case 4:
-#line 41 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 41 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 2;}
 	break;
 	case 5:
-#line 42 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 42 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 3;}
 	break;
 	case 6:
-#line 43 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 43 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 4;}
 	break;
 	case 7:
-#line 44 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 44 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 5;}
 	break;
 	case 8:
-#line 45 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 45 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 6;}
 	break;
 	case 9:
-#line 46 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 46 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 7;}
 	break;
 	case 10:
-#line 47 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 47 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 8;}
 	break;
 	case 11:
-#line 48 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 48 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 9;}
 	break;
 	case 12:
-#line 50 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 50 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 10;}
 	break;
 	case 13:
-#line 51 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 51 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 11;}
 	break;
 	case 14:
-#line 52 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 52 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 12;}
 	break;
 	case 15:
-#line 53 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 53 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 13;}
 	break;
 	case 16:
-#line 56 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 56 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 14;}
 	break;
 	case 17:
-#line 57 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 57 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 15;}
 	break;
 	case 18:
-#line 58 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 58 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 16;}
 	break;
 	case 19:
-#line 59 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 59 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 17;}
 	break;
 	case 20:
-#line 60 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 60 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 18;}
 	break;
 	case 21:
-#line 61 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 61 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 19;}
 	break;
 	case 22:
-#line 62 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 62 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 20;}
 	break;
 	case 23:
-#line 63 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 63 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 21;}
 	break;
 	case 24:
-#line 64 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 64 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 22;}
 	break;
 	case 25:
-#line 65 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 65 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 23;}
 	break;
 	case 26:
-#line 66 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 66 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 24;}
 	break;
 	case 27:
-#line 67 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 67 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 25;}
 	break;
 	case 28:
-#line 87 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 87 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 35;}
 	break;
 	case 29:
-#line 88 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 88 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 36;}
 	break;
 	case 30:
-#line 89 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 89 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 37;}
 	break;
 	case 31:
-#line 91 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 91 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 38;}
 	break;
 	case 32:
-#line 95 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 95 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 41;}
 	break;
 	case 33:
-#line 97 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 97 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 42;}
 	break;
 	case 34:
-#line 98 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 98 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 43;}
 	break;
 	case 35:
-#line 99 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 99 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 44;}
 	break;
 	case 36:
-#line 102 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 102 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 46;}
 	break;
 	case 37:
-#line 106 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 106 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{act = 49;}
 	break;
 	case 38:
-#line 40 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 40 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL1>",2);}}
 	break;
 	case 39:
-#line 41 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 41 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL5>",2);}}
 	break;
 	case 40:
-#line 42 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 42 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL1>",1);}}
 	break;
 	case 41:
-#line 43 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 43 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 42:
-#line 44 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 44 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 43:
-#line 45 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 45 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 44:
-#line 46 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 46 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL2>",0);}}
 	break;
 	case 45:
-#line 47 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 47 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL5>",1);}}
 	break;
 	case 46:
-#line 48 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 48 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL5>",0);}}
 	break;
 	case 47:
-#line 78 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 78 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{add(out,ts,te,"<ORD>");}}
 	break;
 	case 48:
-#line 79 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 79 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{add(out,ts,te,"<ORD>");}}
 	break;
 	case 49:
-#line 80 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 80 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{add(out,ts,te,"<ORD>");}}
 	break;
 	case 50:
-#line 81 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 81 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{add(out,ts,te,"<ORD>");}}
 	break;
 	case 51:
-#line 82 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 82 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{add(out,ts,te,"<ORD>");}}
 	break;
 	case 52:
-#line 84 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 84 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{add(out,ts,te,"<MESIAC>");}}
 	break;
 	case 53:
-#line 89 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 89 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{add_int(out,ts,te);}}
 	break;
 	case 54:
-#line 94 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 94 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{add_ints(out,ts,te,':');}}
 	break;
 	case 55:
-#line 97 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 97 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{add_long(out,ts,te);}}
 	break;
 	case 56:
-#line 102 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 102 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{ add(out,ts,te,"<FIRMA1>");}}
 	break;
 	case 57:
-#line 104 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 104 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{add(out,ts,te,"<STAT1>");}}
 	break;
 	case 58:
-#line 105 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 105 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{add(out,ts,te,"<STAT2>");}}
 	break;
 	case 59:
-#line 106 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 106 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p+1;{ out << *ts;}}
 	break;
 	case 60:
-#line 40 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 40 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL1>",2);}}
 	break;
 	case 61:
-#line 41 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 41 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL5>",2);}}
 	break;
 	case 62:
-#line 42 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 42 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL1>",1);}}
 	break;
 	case 63:
-#line 43 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 43 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 64:
-#line 44 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 44 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 65:
-#line 45 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 45 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 66:
-#line 46 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 46 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL2>",0);}}
 	break;
 	case 67:
-#line 47 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 47 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL5>",1);}}
 	break;
 	case 68:
-#line 48 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 48 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL5>",0);}}
 	break;
 	case 69:
-#line 50 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 50 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<OBEC1>",0);}}
 	break;
 	case 70:
-#line 51 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 51 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<OBEC1>",2);}}
 	break;
 	case 71:
-#line 52 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 52 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<OBEC1>",2);}}
 	break;
 	case 72:
-#line 53 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 53 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<OBEC5>",2);}}
 	break;
 	case 73:
-#line 56 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 56 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<MM1>","<MP1>",1);}}
 	break;
 	case 74:
-#line 57 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 57 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<ZM1>","<ZP1>",1);}}
 	break;
 	case 75:
-#line 58 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 58 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<MM1>","<MP1>",1);}}
 	break;
 	case 76:
-#line 59 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 59 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<MM24>","<MP24>",1);}}
 	break;
 	case 77:
-#line 60 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 60 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<ZM24>","<ZP24>",1);}}
 	break;
 	case 78:
-#line 61 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 61 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<ZM35>","<ZP35>",1);}}
 	break;
 	case 79:
-#line 62 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 62 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<ZM35>","<ZP35>",1);}}
 	break;
 	case 80:
-#line 63 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 63 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<MM6>","<MP6>",1);}}
 	break;
 	case 81:
-#line 64 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 64 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<ZM6>","<ZP6>",1);}}
 	break;
 	case 82:
-#line 65 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 65 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<MM6>","<MP6>",1);}}
 	break;
 	case 83:
-#line 66 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 66 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<MM1>","<MP1>",1);}}
 	break;
 	case 84:
-#line 67 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 67 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_name(out,ts,te,"<MM1>","<MP1>",1);}}
 	break;
 	case 85:
-#line 70 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 70 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ out << " IČO: ";
 add(out,ts+5,te,"<LONG>");}}
 	break;
 	case 86:
-#line 72 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 72 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ out << " EEČ: ";
 add(out,ts+5,te,"<LONG>");}}
 	break;
 	case 87:
-#line 86 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 86 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add(out,ts,te,"<DATE>");}}
 	break;
 	case 88:
-#line 87 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 87 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add(out,ts,te,"<INT>");}}
 	break;
 	case 89:
-#line 88 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 88 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add(out,ts,te,"<INT>");}}
 	break;
 	case 90:
-#line 89 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 89 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_int(out,ts,te);}}
 	break;
 	case 91:
-#line 91 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 91 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add(out,ts,te,"<ORD>");}}
 	break;
 	case 92:
-#line 92 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 92 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add(out,ts,te,"<FLT>");}}
 	break;
 	case 93:
-#line 95 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 95 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_ints(out,ts,te,'.');}}
 	break;
 	case 94:
-#line 97 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 97 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_long(out,ts,te);}}
 	break;
 	case 95:
-#line 98 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 98 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_long(out,ts,te);}}
 	break;
 	case 96:
-#line 99 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 99 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{add_long(out,ts,te);}}
 	break;
 	case 97:
-#line 102 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 102 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ add(out,ts,te,"<FIRMA1>");}}
 	break;
 	case 98:
-#line 106 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 106 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{te = p;p--;{ out << *ts;}}
 	break;
 	case 99:
-#line 40 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 40 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL1>",2);}}
 	break;
 	case 100:
-#line 41 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 41 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL5>",2);}}
 	break;
 	case 101:
-#line 42 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 42 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL1>",1);}}
 	break;
 	case 102:
-#line 43 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 43 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 103:
-#line 44 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 44 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 104:
-#line 45 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 45 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 105:
-#line 46 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 46 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL2>",0);}}
 	break;
 	case 106:
-#line 47 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 47 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL5>",1);}}
 	break;
 	case 107:
-#line 48 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 48 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL5>",0);}}
 	break;
 	case 108:
-#line 50 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 50 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<OBEC1>",0);}}
 	break;
 	case 109:
-#line 51 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 51 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<OBEC1>",2);}}
 	break;
 	case 110:
-#line 52 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 52 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<OBEC1>",2);}}
 	break;
 	case 111:
-#line 53 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 53 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<OBEC5>",2);}}
 	break;
 	case 112:
-#line 87 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 87 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add(out,ts,te,"<INT>");}}
 	break;
 	case 113:
-#line 88 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 88 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add(out,ts,te,"<INT>");}}
 	break;
 	case 114:
-#line 89 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 89 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{add_int(out,ts,te);}}
 	break;
 	case 115:
-#line 91 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 91 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ add(out,ts,te,"<ORD>");}}
 	break;
 	case 116:
-#line 106 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 106 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	{{p = ((te))-1;}{ out << *ts;}}
 	break;
 	case 117:
@@ -49112,7 +49112,7 @@ add(out,ts+5,te,"<LONG>");}}
 	}
 	}
 	break;
-#line 49116 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h"
+#line 49116 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
 		}
 	}
 
@@ -49125,7 +49125,7 @@ _again:
 #line 1 "NONE"
 	{ts = 0;}
 	break;
-#line 49129 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h"
+#line 49129 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
 		}
 	}
 
@@ -49142,7 +49142,7 @@ _again:
 
 	}
 
-#line 244 "/home/dano/apps/lexer/src/lexer/AnnotatorLexer.h.rl"
+#line 244 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
 	}
 };
 

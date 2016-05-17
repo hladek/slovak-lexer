@@ -34,6 +34,7 @@ class Annotator {
     public:
 
         virtual void annotate(char* ,size_t ,ostream& ){
+            cerr << "Unimplemented" << endl;
             abort();
         }
         virtual ~Annotator(){}
@@ -69,6 +70,7 @@ class TCPFork {
             while(1){
                 tv.tv_sec = 10;
                 tv.tv_usec = 500000;
+                assert(written >= 0);
                 if (out.size() > 0){
                     //cout << "Listening read write " << endl;
                     res = select(newsock + 1, &readfds, &writefds, NULL, &tv);

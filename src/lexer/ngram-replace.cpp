@@ -2,7 +2,7 @@
 #include <sstream>
 
 #include "btree.h"
-#ifdef LIBUV_FOUND
+#ifdef NETWORKING_ENABLED
 #include "TCPFork.h"
 #endif
 #include "AnnotatorLexer.h"
@@ -71,7 +71,7 @@ public:
 
 
 class NgramIndex
-#ifdef LIBUV_FOUND
+#ifdef NETWORKING_ENABLED
 : public Annotator
 #endif
 {
@@ -197,7 +197,7 @@ public:
 
 int main(int argc, char **argv) {
 	LCParser  lp;
-#ifdef LIBUV_FOUND
+#ifdef NETWORKING_ENABLED
 	Arg porta(lp,"-p",Arg::STRING, "Run server on port" ,"--port");
 #endif
 	Arg helpa(lp,"-h",Arg::BOOL, "Print help" ,"--help");
@@ -225,7 +225,7 @@ int main(int argc, char **argv) {
 		LineTokenizer lt(ifs);
 		r.load_rules(lt);
 	}
-#ifdef LIBUV_FOUND
+#ifdef NETWORKING_ENABLED
 	if (porta.isValid) {
 		cout << "Loaded " << r.rules.size() << endl;
         return TCPFork::start(&r,porta.value);
@@ -236,7 +236,7 @@ int main(int argc, char **argv) {
 		while (lt.next()){
             r.annotate(lt.token().start(),lt.token().size(),cout);
 		}
-#ifdef LIBUV_FOUND
+#ifdef NETWORKING_ENABLED
 	}
 #endif
 }

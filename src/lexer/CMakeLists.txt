@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
+add_definitions(-DNETWORKING_ENABLED)
 
 
 add_custom_command (
@@ -15,7 +16,7 @@ target_link_libraries(slovaktokenizer lemonstring)
 add_dependencies(slovaktokenizer lexer2)
 install(TARGETS slovaktokenizer DESTINATION bin)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/SlovakLexer.h DESTINATION include)
-add_definitions(-DLIBUV_FOUND)
+add_definitions(-DNETWORKING_ENABLED)
 add_custom_command (
     OUTPUT  ${CMAKE_CURRENT_SOURCE_DIR}/AnnotatorLexer.h
     DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/AnnotatorLexer.h.rl # build when lexer.rl is newer
