@@ -119,7 +119,8 @@ class TCPFork {
                                 msg.clear();
                             }
                         }
-                        out.push_front(os.str());
+                        if (os.str().size() > 0)
+                            out.push_front(os.str());
                         //cout << "Processed " << out.front().size() << endl;
                     }
                 }
