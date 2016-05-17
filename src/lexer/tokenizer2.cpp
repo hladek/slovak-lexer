@@ -149,7 +149,7 @@ int main(int argc, char **argv) {
     LexerTokenizer ltok(vocab);
 #ifdef NETWORKING_ENABLED
     if (porta.isValid){
-        return TCPFork::start(&ltok, porta.value);
+        return TCPFork::start(&ltok, (int)porta.value);
     }
     else
 #endif

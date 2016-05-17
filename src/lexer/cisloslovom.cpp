@@ -251,7 +251,7 @@ int main(int argc, char **argv) {
 	}
 	if (porta.isValid) {
 		cout << "Loaded " << r.rules.size() << endl;
-        return TCPFork::start(&r,porta.value);
+        return TCPFork::start(&r,(int)porta.value);
 	}
 	else{
 		LineTokenizer lt(cin);

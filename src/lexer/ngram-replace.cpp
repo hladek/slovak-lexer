@@ -228,7 +228,7 @@ int main(int argc, char **argv) {
 #ifdef NETWORKING_ENABLED
 	if (porta.isValid) {
 		cout << "Loaded " << r.rules.size() << endl;
-        return TCPFork::start(&r,porta.value);
+        return TCPFork::start(&r,(int)porta.value);
 	}
 	else{
 #endif
