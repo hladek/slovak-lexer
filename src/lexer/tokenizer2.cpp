@@ -13,12 +13,12 @@ class LexerTokenizer: public Lexer2
 #endif
 {
 public:
-	const Vocab3& vocab;
-	Vocab3 numbers;
-	LexerTokenizer(Vocab3& vocab):vocab(vocab){
-		numbers.Add(LString("jedenásť"));
-		numbers.Add(LString("dvanásť"));
-		numbers.Add(LString("trinásť"));
+    const Vocab3& vocab;
+    Vocab3 numbers;
+    LexerTokenizer(Vocab3& vocab):vocab(vocab){
+        numbers.Add(LString("jedenásť"));
+        numbers.Add(LString("dvanásť"));
+        numbers.Add(LString("trinásť"));
         numbers.Add(LString("štrnásť"));
         numbers.Add(LString("pätnásť"));
         numbers.Add(LString("šestnásť"));
@@ -52,8 +52,8 @@ public:
         numbers.Add(LString("desať"));
         numbers.Add(LString("tisíc"));
         numbers.Add(LString("sto"));
-	}
-	virtual ~LexerTokenizer(){};
+    }
+    virtual ~LexerTokenizer(){};
 
     virtual void annotate(char* instr,size_t sz,ostream& os){
         LString chunk(instr,sz);
@@ -69,78 +69,78 @@ public:
         Lexer2::annotate_line(LString(norm),ss);
         //os << ss.str();
          
-   		LineTokenizer tok(ss);
+           LineTokenizer tok(ss);
     
-		//os << "--------" << endl;
-		//os << out.str();
-		//os << "--------" << endl;
-		while(tok.next()){
-			//os << tok.token();
-			Tokenizer tok2(tok.token(),' ');
-			int count = 0;
-			LString last("");
-			string word;
-			while (tok2.next()){
-				word = tok2.token().str();
-				//cout << "---" << word << "--" << endl;
-				// Rozdelenie cisiel slovom na jednoptlive slova
-				if (word.size() > 7){
-					LString rest = LString(word);
-					stringstream buf2;
-					bool found = true;
-					while (found && rest.size() > 0){
-						found = false;
-						for (size_t i = 0; i < numbers.size(); i++){
-							if (rest.starts_with(numbers.Get(i))){
-								//cout << "Found" << endl;
-								buf2 << numbers.Get(i);
-								buf2 << ' ';
-								rest = rest.lstrip(numbers.Get(i).size());
-								found = true;
-								break;
-							}
-						}
-					}
-					if (rest.size() == 0){
-						word = buf2.str();
-					}
-				}
-				// Vypise token
-				// Tokeny vacsie ako 40 sa vyhadzuju
-				Tokenizer tok3(LString(word),' ');
-				while (tok3.next()){
-					if (tok3.token().size() < 40){
-						if (count == 0){
-							os << ' ';
-						}
-						os << tok3.token();
-						os << ' ';
-						count += 1;
-						last = tok2.token();
+        //os << "--------" << endl;
+        //os << out.str();
+        //os << "--------" << endl;
+        while(tok.next()){
+            //os << tok.token();
+            Tokenizer tok2(tok.token(),' ');
+            int count = 0;
+            LString last("");
+            string word;
+            while (tok2.next()){
+                word = tok2.token().str();
+                //cout << "---" << word << "--" << endl;
+                // Rozdelenie cisiel slovom na jednoptlive slova
+                if (word.size() > 7){
+                    LString rest = LString(word);
+                    stringstream buf2;
+                    bool found = true;
+                    while (found && rest.size() > 0){
+                        found = false;
+                        for (size_t i = 0; i < numbers.size(); i++){
+                            if (rest.starts_with(numbers.Get(i))){
+                                //cout << "Found" << endl;
+                                buf2 << numbers.Get(i);
+                                buf2 << ' ';
+                                rest = rest.lstrip(numbers.Get(i).size());
+                                found = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (rest.size() == 0){
+                        word = buf2.str();
+                    }
+                }
+                // Vypise token
+                // Tokeny vacsie ako 40 sa vyhadzuju
+                Tokenizer tok3(LString(word),' ');
+                while (tok3.next()){
+                    if (tok3.token().size() < 40){
+                        if (count == 0){
+                            os << ' ';
+                        }
+                        os << tok3.token();
+                        os << ' ';
+                        count += 1;
+                        last = tok2.token();
                         char c = tok3.token().start()[0];
                         if (c == '?' || c == '!' || c == '.' || c == ':'){
                             os << endl;
                         }
-					}
-				}
-			}
+                    }
+                }
+            }
 
-			if (count == 0){
-				os << endl;
-		    }	
-			//os << count;
-			//os << endl;
-			//os << endl;
-		}
-	}
+            if (count == 0){
+                os << endl;
+            }    
+            //os << count;
+            //os << endl;
+            //os << endl;
+        }
+    }
 };
 int main(int argc, char **argv) {
-	LCParser  lp;
-	Arg helpa(lp,"-h",Arg::BOOL,"Print usage and exit.","--help");
-	Arg filea(lp,"-f",Arg::STRING, "Set file to process" ,"--file");
-	Arg porta(lp,"-p",Arg::INTEGER, "Listen on port" ,"--port");
-	Vocab3 vocab;
-	lp.parse(argc,argv);
+    LCParser  lp;
+    Arg helpa(lp,"-h",Arg::BOOL,"Print usage and exit.","--help");
+    Arg filea(lp,"-f",Arg::STRING, "Set file to process" ,"--file");
+    Arg porta(lp,"-p",Arg::INTEGER, "Listen on port" ,"--port");
+    Vocab3 vocab;
+    lp.parse(argc,argv);
     if (helpa.isValid){
         lp.help(cout);
         return 0;

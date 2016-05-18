@@ -12,7 +12,7 @@ int main(int argc, char **argv) {
 Ulice ul;
 LineTokenizer lt(cin,true);
 while (lt.next()){
-	ul.annotate_line(lt.token(),cout);
+    ul.annotate_line(lt.token(),cout);
 
 }
 }

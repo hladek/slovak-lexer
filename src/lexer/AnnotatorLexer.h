@@ -48318,8 +48318,8 @@ static const int slovakparser_en_main = 11869;
 class AnnotationLexer : public RagelProcessor{
 
 public:
-	AnnotationLexer() {
-		
+    AnnotationLexer() {
+        
 #line 48324 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
 	{
 	cs = slovakparser_start;
@@ -48329,132 +48329,127 @@ public:
 	}
 
 #line 119 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
-	}
-	
-	
-	void add_int(ostream& out,unsigned char* ts,unsigned char* te){
-	  out << ' ';
-	  while(ts != te){
-	    if (is_char_digit(*ts)){
-	      out << *ts;
-	    }
-	    ts++;
-	  }
-	  out << "|<INT> "; 
-	}
-	void add_ints(ostream& out,unsigned char* ts,unsigned char* te,char spl){
-	  out << ' ';
-	  LString t((char*)ts, te-ts);
-	  Tokenizer tok(t,spl);
-	  size_t i = 0;
-	  while (tok.next()){
-	    for (i = 0 ; i < tok.token().size(); i++){
-	      if (is_char_digit(tok.token()[i])){
-	        out << tok.token()[i];
-	      }
-	    }
-	    if (i > 0){
-	      out << "|<INT> ";
-	    }
-	  }
-	    
-	  while(ts != te){
-	    if (is_char_digit(*ts)){
-	      out << *ts;
-	    }
-	    ts++;
-	  }
-	  out << "|<INT> "; 
-	}
-	
-	
-	
-	
-	void add_long(ostream& out,unsigned char* ts,unsigned char* te){
-	  LString t((char*)ts, te-ts);
-	  Tokenizer tok(t,' ');
-	  while(tok.next()){
-	  	out << tok.token();
-	  }
-	  out << "|<LONG> ";
-	 }
-	 
-	 void add_street(ostream& out,unsigned char* ts,unsigned char* te,const char* cl,int lstrip){
-	    LString t((char*)ts, te-ts);
-	    int i = 0;
-	    int sz = 0;
-	    Tokenizer tok2(t,' ');
-	    while (tok2.next()){
-	      sz += 1;
-	    }
-	    Tokenizer tok(t,' ');
-	    int v = 0;
-	    while (tok.next()){
-	     	out << ' ';
-	        out << tok.token();
-	        if (i >= lstrip ){
-		        if (tok.token() == "č." || tok.token() ==  "číslo" ){
-		        	
-		        }
-		        else if (to_int(tok.token(),v)){
-		        	out << "|<INT>";
-		        }
-		        else{
-		        	out << '|';
-		          	out << cl;
-		        }
-	        }
-	        out << ' ';
-	        i++;
-	    }
-	}
-	
-	void add_name(ostream& out,unsigned char* ts,unsigned char* te,const char* meno,const char* priezvisko,int lstrip){
-	    LString t((char*)ts, te-ts);
-	    int i = 0;
-	    int sz = 0;
-	    Tokenizer tok2(t,' ');
-	    while (tok2.next()){
-	      sz += 1;
-	    }
-	    Tokenizer tok(t,' ');
-	    int v = 0;
-	    while (tok.next()){
-	     	out << ' ';
-	        out << tok.token();
-	        if (i >= lstrip && tok.token() != "JUDr." && tok.token() != "Mgr."  && tok.token() != "Ing." ){
-		     	out << '|';
-		     	if (v == 0){
-		        	out << meno;
-		        	v += 1;
-		        }
-		        else {
-		        	out << priezvisko;
-		        }
-		        
-		    }
-	        out << ' ';
-	        i++;
-	    }
-	}	
-	
-	
-	
-	void add(ostream& out,unsigned char* ts,unsigned char* te,const char* cl){
-	    LString t((char*)ts, te-ts);
-	    Tokenizer tok(t,' ');
-	    while (tok.next()){
-	     	out << ' ';
-	        out << tok.token();
-	        out << '|';
-	        out << cl;
-	        out << ' ';
-	    }
-	}
-		
-	virtual void call_ragel(ostream& out){
-		
-#line 48458 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
+    }
+    
+    
+    void add_int(ostream& out,unsigned char* ts,unsigned char* te){
+      out << ' ';
+      while(ts != te){
+        if (is_char_digit(*ts)){
+          out << *ts;
+        }
+        ts++;
+      }
+      out << "|<INT> "; 
+    }
+    void add_ints(ostream& out,unsigned char* ts,unsigned char* te,char spl){
+      out << ' ';
+      LString t((char*)ts, te-ts);
+      Tokenizer tok(t,spl);
+      size_t i = 0;
+      while (tok.next()){
+        for (i = 0 ; i < tok.token().size(); i++){
+          if (is_char_digit(tok.token()[i])){
+            out << tok.token()[i];
+          }
+        }
+        if (i > 0){
+          out << "|<INT> ";
+        }
+      }
+        
+      while(ts != te){
+        if (is_char_digit(*ts)){
+          out << *ts;
+        }
+        ts++;
+      }
+      out << "|<INT> "; 
+    }
+    
+    
+    
+    
+    void add_long(ostream& out,unsigned char* ts,unsigned char* te){
+      LString t((char*)ts, te-ts);
+      Tokenizer tok(t,' ');
+      while(tok.next()){
+          out << tok.token();
+      }
+      out << "|<LONG> ";
+     }
+     
+     void add_street(ostream& out,unsigned char* ts,unsigned char* te,const char* cl,int lstrip){
+        LString t((char*)ts, te-ts);
+        int i = 0;
+        int sz = 0;
+        Tokenizer tok2(t,' ');
+        while (tok2.next()){
+          sz += 1;
+        }
+        Tokenizer tok(t,' ');
+        int v = 0;
+        while (tok.next()){
+             out << ' ';
+            out << tok.token();
+            if (i >= lstrip ){
+                if (tok.token() == "č." || tok.token() ==  "číslo" ){
+                    
+                }
+                else if (to_int(tok.token(),v)){
+                    out << "|<INT>";
+                }
+                else{
+                    out << '|';
+                      out << cl;
+                }
+            }
+            out << ' ';
+            i++;
+        }
+    }
+    
+    void add_name(ostream& out,unsigned char* ts,unsigned char* te,const char* meno,const char* priezvisko,int lstrip){
+        LString t((char*)ts, te-ts);
+        int i = 0;
+        int sz = 0;
+        Tokenizer tok2(t,' ');
+        while (tok2.next()){
+          sz += 1;
+        }
+        Tokenizer tok(t,' ');
+        int v = 0;
+        while (tok.next()){
+             out << ' ';
+            out << tok.token();
+            if (i >= lstrip && tok.token() != "JUDr." && tok.token() != "Mgr."  && tok.token() != "Ing." ){
+                 out << '|';
+                 if (v == 0){
+                    out << meno;
+                    v += 1;
+                }
+                else {
+                    out << priezvisko;
+                }
+            }
+            out << ' ';
+            i++;
+        }
+    }
+    void add(ostream& out,unsigned char* ts,unsigned char* te,const char* cl){
+        LString t((char*)ts, te-ts);
+        Tokenizer tok(t,' ');
+        while (tok.next()){
+             out << ' ';
+            out << tok.token();
+            out << '|';
+            out << cl;
+            out << ' ';
+        }
+    }
+    virtual void call_ragel(ostream& out){
+        
+#line 48453 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
 	{
 	int _klen;
 	unsigned int _trans;
@@ -48473,7 +48468,7 @@ _resume:
 #line 1 "NONE"
 	{ts = p;}
 	break;
-#line 48477 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
+#line 48472 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
 		}
 	}
 
@@ -49112,7 +49107,7 @@ add(out,ts+5,te,"<LONG>");}}
 	}
 	}
 	break;
-#line 49116 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
+#line 49111 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
 		}
 	}
 
@@ -49125,7 +49120,7 @@ _again:
 #line 1 "NONE"
 	{ts = 0;}
 	break;
-#line 49129 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
+#line 49124 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h"
 		}
 	}
 
@@ -49142,8 +49137,8 @@ _again:
 
 	}
 
-#line 244 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
-	}
+#line 239 "/home/dano/apps/github/slovak-lexer/src/lexer/AnnotatorLexer.h.rl"
+    }
 };
 
 #endif /* QUOTELEXER_H_ */

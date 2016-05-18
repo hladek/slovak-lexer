@@ -114,134 +114,129 @@ any => { out << *ts;};
 class AnnotationLexer : public RagelProcessor{
 
 public:
-	AnnotationLexer() {
-		%% write init;
-	}
-	
-	
-	void add_int(ostream& out,unsigned char* ts,unsigned char* te){
-	  out << ' ';
-	  while(ts != te){
-	    if (is_char_digit(*ts)){
-	      out << *ts;
-	    }
-	    ts++;
-	  }
-	  out << "|<INT> "; 
-	}
-	void add_ints(ostream& out,unsigned char* ts,unsigned char* te,char spl){
-	  out << ' ';
-	  LString t((char*)ts, te-ts);
-	  Tokenizer tok(t,spl);
-	  size_t i = 0;
-	  while (tok.next()){
-	    for (i = 0 ; i < tok.token().size(); i++){
-	      if (is_char_digit(tok.token()[i])){
-	        out << tok.token()[i];
-	      }
-	    }
-	    if (i > 0){
-	      out << "|<INT> ";
-	    }
-	  }
-	    
-	  while(ts != te){
-	    if (is_char_digit(*ts)){
-	      out << *ts;
-	    }
-	    ts++;
-	  }
-	  out << "|<INT> "; 
-	}
-	
-	
-	
-	
-	void add_long(ostream& out,unsigned char* ts,unsigned char* te){
-	  LString t((char*)ts, te-ts);
-	  Tokenizer tok(t,' ');
-	  while(tok.next()){
-	  	out << tok.token();
-	  }
-	  out << "|<LONG> ";
-	 }
-	 
-	 void add_street(ostream& out,unsigned char* ts,unsigned char* te,const char* cl,int lstrip){
-	    LString t((char*)ts, te-ts);
-	    int i = 0;
-	    int sz = 0;
-	    Tokenizer tok2(t,' ');
-	    while (tok2.next()){
-	      sz += 1;
-	    }
-	    Tokenizer tok(t,' ');
-	    int v = 0;
-	    while (tok.next()){
-	     	out << ' ';
-	        out << tok.token();
-	        if (i >= lstrip ){
-		        if (tok.token() == "č." || tok.token() ==  "číslo" ){
-		        	
-		        }
-		        else if (to_int(tok.token(),v)){
-		        	out << "|<INT>";
-		        }
-		        else{
-		        	out << '|';
-		          	out << cl;
-		        }
-	        }
-	        out << ' ';
-	        i++;
-	    }
-	}
-	
-	void add_name(ostream& out,unsigned char* ts,unsigned char* te,const char* meno,const char* priezvisko,int lstrip){
-	    LString t((char*)ts, te-ts);
-	    int i = 0;
-	    int sz = 0;
-	    Tokenizer tok2(t,' ');
-	    while (tok2.next()){
-	      sz += 1;
-	    }
-	    Tokenizer tok(t,' ');
-	    int v = 0;
-	    while (tok.next()){
-	     	out << ' ';
-	        out << tok.token();
-	        if (i >= lstrip && tok.token() != "JUDr." && tok.token() != "Mgr."  && tok.token() != "Ing." ){
-		     	out << '|';
-		     	if (v == 0){
-		        	out << meno;
-		        	v += 1;
-		        }
-		        else {
-		        	out << priezvisko;
-		        }
-		        
-		    }
-	        out << ' ';
-	        i++;
-	    }
-	}	
-	
-	
-	
-	void add(ostream& out,unsigned char* ts,unsigned char* te,const char* cl){
-	    LString t((char*)ts, te-ts);
-	    Tokenizer tok(t,' ');
-	    while (tok.next()){
-	     	out << ' ';
-	        out << tok.token();
-	        out << '|';
-	        out << cl;
-	        out << ' ';
-	    }
-	}
-		
-	virtual void call_ragel(ostream& out){
-		%% write exec;
-	}
+    AnnotationLexer() {
+        %% write init;
+    }
+    
+    
+    void add_int(ostream& out,unsigned char* ts,unsigned char* te){
+      out << ' ';
+      while(ts != te){
+        if (is_char_digit(*ts)){
+          out << *ts;
+        }
+        ts++;
+      }
+      out << "|<INT> "; 
+    }
+    void add_ints(ostream& out,unsigned char* ts,unsigned char* te,char spl){
+      out << ' ';
+      LString t((char*)ts, te-ts);
+      Tokenizer tok(t,spl);
+      size_t i = 0;
+      while (tok.next()){
+        for (i = 0 ; i < tok.token().size(); i++){
+          if (is_char_digit(tok.token()[i])){
+            out << tok.token()[i];
+          }
+        }
+        if (i > 0){
+          out << "|<INT> ";
+        }
+      }
+        
+      while(ts != te){
+        if (is_char_digit(*ts)){
+          out << *ts;
+        }
+        ts++;
+      }
+      out << "|<INT> "; 
+    }
+    
+    
+    
+    
+    void add_long(ostream& out,unsigned char* ts,unsigned char* te){
+      LString t((char*)ts, te-ts);
+      Tokenizer tok(t,' ');
+      while(tok.next()){
+          out << tok.token();
+      }
+      out << "|<LONG> ";
+     }
+     
+     void add_street(ostream& out,unsigned char* ts,unsigned char* te,const char* cl,int lstrip){
+        LString t((char*)ts, te-ts);
+        int i = 0;
+        int sz = 0;
+        Tokenizer tok2(t,' ');
+        while (tok2.next()){
+          sz += 1;
+        }
+        Tokenizer tok(t,' ');
+        int v = 0;
+        while (tok.next()){
+             out << ' ';
+            out << tok.token();
+            if (i >= lstrip ){
+                if (tok.token() == "č." || tok.token() ==  "číslo" ){
+                    
+                }
+                else if (to_int(tok.token(),v)){
+                    out << "|<INT>";
+                }
+                else{
+                    out << '|';
+                      out << cl;
+                }
+            }
+            out << ' ';
+            i++;
+        }
+    }
+    
+    void add_name(ostream& out,unsigned char* ts,unsigned char* te,const char* meno,const char* priezvisko,int lstrip){
+        LString t((char*)ts, te-ts);
+        int i = 0;
+        int sz = 0;
+        Tokenizer tok2(t,' ');
+        while (tok2.next()){
+          sz += 1;
+        }
+        Tokenizer tok(t,' ');
+        int v = 0;
+        while (tok.next()){
+             out << ' ';
+            out << tok.token();
+            if (i >= lstrip && tok.token() != "JUDr." && tok.token() != "Mgr."  && tok.token() != "Ing." ){
+                 out << '|';
+                 if (v == 0){
+                    out << meno;
+                    v += 1;
+                }
+                else {
+                    out << priezvisko;
+                }
+            }
+            out << ' ';
+            i++;
+        }
+    }
+    void add(ostream& out,unsigned char* ts,unsigned char* te,const char* cl){
+        LString t((char*)ts, te-ts);
+        Tokenizer tok(t,' ');
+        while (tok.next()){
+             out << ' ';
+            out << tok.token();
+            out << '|';
+            out << cl;
+            out << ' ';
+        }
+    }
+    virtual void call_ragel(ostream& out){
+        %% write exec;
+    }
 };
 
 #endif /* QUOTELEXER_H_ */
