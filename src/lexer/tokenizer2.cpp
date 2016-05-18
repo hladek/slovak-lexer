@@ -57,20 +57,20 @@ public:
 
     virtual void annotate(char* instr,size_t sz,ostream& os){
         LString chunk(instr,sz);
+        stringstream ss(ios_base::in | ios_base::out);
         if (chunk.size() > 4){
             if ((chunk[0] == 'i' && chunk[1] == '\t') || chunk == "--endtext"){
                 os << chunk << endl;
+                if (chunk == "--endtext")
+                    Lexer2::annotate_line(LString("\n\n"),ss);
                 return;
             }
         }
         string norm = to_normalized(chunk);
         norm += "\n";
-        stringstream ss(ios_base::in | ios_base::out);
         Lexer2::annotate_line(LString(norm),ss);
         //os << ss.str();
-         
-           LineTokenizer tok(ss);
-    
+       LineTokenizer tok(ss);
         //os << "--------" << endl;
         //os << out.str();
         //os << "--------" << endl;
