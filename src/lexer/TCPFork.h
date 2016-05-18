@@ -50,7 +50,9 @@ class TCPFork {
         }
 
         static void handle(int newsock,Annotator* annot) {
-            //cout << "Handling" << endl;
+#ifndef NDEBUG
+            cout << "Handling" << endl;
+#endif
             struct timeval tv;
 
 
@@ -72,26 +74,38 @@ class TCPFork {
                 tv.tv_usec = 500000;
                 assert(written >= 0);
                 if (out.size() > 0){
-                    //cout << "Listening read write " << endl;
+#ifndef NDEBUG
+                    cout << "Listening read write " << endl;
+#endif
                     res = select(newsock + 1, &readfds, &writefds, NULL, &tv);
                 }
                 else {
-                    //cout << "Listening read " << endl;
+#ifndef NDEBUG
+                    cout << "Listening read " << endl;
+#endif
                     res = select(newsock + 1, &readfds, 0 , NULL, &tv);
                 }
                 if (res <= 0){
-                    //cout << "Select error or timeout" << endl;
+#ifndef NDEBUG
+                    cout << "Select error or timeout" << endl;
+#endif
                     break;
                 }
                 if (out.size() > 0 && FD_ISSET(newsock, &writefds)){
                     assert(written < (int)out.back().size());
                     res = send(newsock,out.back().data() + written ,(ssize_t)out.back().size() - written,0);
                     if (res < 0){
-                        //cout << "Write error" << endl;
+
+#ifndef NDEBUG
+                        cout << "Write error" << endl;
+#endif
                         break;
                     }
                     else{
-                        //cout << "Written " << res<< endl;
+
+#ifndef NDEBUG
+                        cout << "Written " << res<< endl;
+#endif
                         written += res;
                         assert(written <= (int)out.back().size());
                         if (written == (int)out.back().size()){
@@ -104,11 +118,17 @@ class TCPFork {
                 if (FD_ISSET(newsock, &readfds)){
                     res = recv(newsock,buf.data(),buf.size(),0);
                     if (res <= 0){
-                        //cout << "Read error" << endl;
+
+#ifndef NDEBUG
+                        cout << "Read error" << endl;
+#endif
                         break;
                     }
                     else{
-                        //cout << "Read " << res << endl;
+
+#ifndef NDEBUG
+                        cout << "Read " << res << endl;
+#endif
                         stringstream os;
                         for (size_t i = 0; i < (size_t)res; i++){
                             if (buf[i] != '\n'){
@@ -121,12 +141,18 @@ class TCPFork {
                         }
                         if (os.str().size() > 0)
                             out.push_front(os.str());
-                        //cout << "Processed " << out.front().size() << endl;
+
+#ifndef NDEBUG
+                        cout << "Processed " << out.front().size() << endl;
+#endif
                     }
                 }
             }
             close(newsock);
-            //cout << "Close" << endl;
+
+#ifndef NDEBUG
+            cout << "Close" << endl;
+#endif
         }
 
         static int start(Annotator* anot,int port)
@@ -194,8 +220,9 @@ class TCPFork {
                     perror("accept");
                     return 0;
                 }
-
+#ifndef NDEBUG
                 printf("Got a connection from %s on port %d\n", inet_ntoa(their_addr.sin_addr), htons(their_addr.sin_port));
+#endif
 
                 pid = fork();
                 if (pid == 0) {
