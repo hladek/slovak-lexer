@@ -139,12 +139,13 @@ class TCPFork {
                                 msg.clear();
                             }
                         }
-                        if (os.str().size() > 0)
+                        if (os.str().size() > 0) {
                             out.push_front(os.str());
-
 #ifndef NDEBUG
-                        cout << "Processed " << out.front().size() << endl;
+                            cout << "Processed " << out.front().size() << endl;
+
 #endif
+                        }
                     }
                 }
             }
