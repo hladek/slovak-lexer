@@ -70,24 +70,15 @@ class TCPFork {
             deque<string> out;
             int written = 0;
             while(1){
-                tv.tv_sec = 10;
+                tv.tv_sec = 0;
                 tv.tv_usec = 500000;
-                assert(written >= 0);
-                if (out.size() > 0){
 #ifndef NDEBUG
-                    cout << "Listening read write " << endl;
+                cout << "Listening write" << endl;
 #endif
-                    res = select(newsock + 1, &readfds, &writefds, NULL, &tv);
-                }
-                else {
+                res = select(newsock + 1, 0, &writefds, NULL, &tv);
+                if (res < 0){
 #ifndef NDEBUG
-                    cout << "Listening read " << endl;
-#endif
-                    res = select(newsock + 1, &readfds, 0 , NULL, &tv);
-                }
-                if (res <= 0){
-#ifndef NDEBUG
-                    cout << "Select error or timeout" << endl;
+                    cout << "Select error or timeout" << res << endl;
 #endif
                     break;
                 }
@@ -97,7 +88,7 @@ class TCPFork {
                     if (res < 0){
 
 #ifndef NDEBUG
-                        cout << "Write error" << endl;
+                        cout << "Write error " << res << endl;
 #endif
                         break;
                     }
@@ -115,12 +106,24 @@ class TCPFork {
                     }
 
                 }
+#ifndef NDEBUG
+                cout << "Listening read " << endl;
+#endif
+                tv.tv_sec = 0;
+                tv.tv_usec = 5000000;
+                res = select(newsock + 1, &readfds, 0, NULL, &tv);
+                if (res <= 0){
+#ifndef NDEBUG
+                    cout << "Select error or timeout " << res  << endl;
+#endif
+                    break;
+                }
                 if (FD_ISSET(newsock, &readfds)){
                     res = recv(newsock,buf.data(),buf.size(),0);
                     if (res <= 0){
 
 #ifndef NDEBUG
-                        cout << "Read error" << endl;
+                        cout << "Read error " << res << endl;
 #endif
                         break;
                     }
@@ -213,8 +216,8 @@ class TCPFork {
             /* Main loop */
             while (1) {
                 struct sockaddr_in their_addr;
-                size_t size = sizeof(struct sockaddr_in);
-                int newsock = accept(sock, (struct sockaddr*)&their_addr, (socklen_t*)&size);
+                size_t sz = sizeof(struct sockaddr_in);
+                int newsock = accept(sock, (struct sockaddr*)&their_addr, (socklen_t*)&sz);
                 int pid;
 
                 if (newsock == -1) {
