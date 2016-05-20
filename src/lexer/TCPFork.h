@@ -74,8 +74,8 @@ class TCPFork {
 #ifndef NDEBUG
                     cout << "Listening read " << endl;
 #endif
-                    tv.tv_sec = 0;
-                    tv.tv_usec = 5000000;
+                    tv.tv_sec = 30;
+                    tv.tv_usec = 0;
                     res = select(newsock + 1, &readfds, 0, NULL, &tv);
                     if (res <= 0){
 #ifndef NDEBUG
@@ -86,18 +86,22 @@ class TCPFork {
                     if (FD_ISSET(newsock, &readfds)){
                         int shouldread = 0;
                         res = recv(newsock,&shouldread,4,0);
-                        if (res <= 0){
+                        if (res < 0){
 
 #ifndef NDEBUG
                             cout << "Read error" << res << endl;
 #endif
                             break;
                         }
-                        if (shouldread == 0){
+                        // Closed read stream
+                        if (res == 0){
                             isclosing = true;
                         }
+                        // Empty message
+                        else if (shouldread == 0){
+                            out.push_front("");
+                        }
                         else {
-                            cout << shouldread << endl;
                             assert(shouldread > 0);
                             buf.resize(shouldread);
                             res = recv(newsock,buf.data(),buf.size(),0);
@@ -123,8 +127,8 @@ class TCPFork {
                     }
                 }
                 if (out.size() > 0){
-                    tv.tv_sec = 0;
-                    tv.tv_usec = 50;
+                    tv.tv_sec = 30;
+                    tv.tv_usec = 0;
 #ifndef NDEBUG
                     cout << "Listening write" << endl;
 #endif
@@ -138,7 +142,7 @@ class TCPFork {
                     if (FD_ISSET(newsock, &writefds)){
                         int wsz = (int)out.back().size();
                         res = send(newsock,&wsz ,4,0);
-                        if (res < 0){
+                        if (res <= 0){
 
 #ifndef NDEBUG
                             cout << "Write error " << res << endl;
@@ -146,7 +150,7 @@ class TCPFork {
                             break;
                         }
                         res = send(newsock,out.back().data(),(ssize_t)out.back().size(),0);
-                        if (res < 0){
+                        if (res <= 0){
 
 #ifndef NDEBUG
                             cout << "Write error " << res << endl;
