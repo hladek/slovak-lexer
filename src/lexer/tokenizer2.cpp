@@ -57,80 +57,80 @@ public:
 
     virtual void annotate(char* instr,size_t sz,ostream& os){
         LString chunk(instr,sz);
-        stringstream ss(ios_base::in | ios_base::out);
-        if (chunk.size() > 4){
-            if ((chunk[0] == 'i' && chunk[1] == '\t') || chunk == "--endtext"){
-                os << chunk << endl;
-                if (chunk == "--endtext")
-                    Lexer2::annotate_line(LString("\n\n"),ss);
-                return;
+        Tokenizer tok4(chunk,'\n');
+        while(tok4.next()){
+            LString line = tok4.token();
+            stringstream ss(ios_base::in | ios_base::out);
+            if (line.size() > 4){
+                if ((line[0] == 'i' && line[1] == '\t') || line == "--endtext"){
+                    os << line << endl;
+                    continue;
+                }
             }
-        }
-        string norm = to_normalized(chunk);
-        norm += "\n";
-        Lexer2::annotate_line(LString(norm),ss);
-        //os << ss.str();
-       LineTokenizer tok(ss);
-        //os << "--------" << endl;
-        //os << out.str();
-        //os << "--------" << endl;
-        while(tok.next()){
-            //os << tok.token();
-            Tokenizer tok2(tok.token(),' ');
-            int count = 0;
-            LString last("");
-            string word;
-            while (tok2.next()){
-                word = tok2.token().str();
-                //cout << "---" << word << "--" << endl;
-                // Rozdelenie cisiel slovom na jednoptlive slova
-                if (word.size() > 7){
-                    LString rest = LString(word);
-                    stringstream buf2;
-                    bool found = true;
-                    while (found && rest.size() > 0){
-                        found = false;
-                        for (size_t i = 0; i < numbers.size(); i++){
-                            if (rest.starts_with(numbers.Get(i))){
-                                //cout << "Found" << endl;
-                                buf2 << numbers.Get(i);
-                                buf2 << ' ';
-                                rest = rest.lstrip(numbers.Get(i).size());
-                                found = true;
-                                break;
+            string norm = to_normalized(line);
+            norm += "\n";
+            Lexer2::annotate_line(LString(norm),ss);
+            //os << ss.str();
+           LineTokenizer tok(ss);
+            //os << "--------" << endl;
+            //os << out.str();
+            //os << "--------" << endl;
+            while(tok.next()){
+                //os << tok.token();
+                Tokenizer tok2(tok.token(),' ');
+                int count = 0;
+                LString last("");
+                string word;
+                while (tok2.next()){
+                    word = tok2.token().str();
+                    //cout << "---" << word << "--" << endl;
+                    // Rozdelenie cisiel slovom na jednoptlive slova
+                    if (word.size() > 7){
+                        LString rest = LString(word);
+                        stringstream buf2;
+                        bool found = true;
+                        while (found && rest.size() > 0){
+                            found = false;
+                            for (size_t i = 0; i < numbers.size(); i++){
+                                if (rest.starts_with(numbers.Get(i))){
+                                    //cout << "Found" << endl;
+                                    buf2 << numbers.Get(i);
+                                    buf2 << ' ';
+                                    rest = rest.lstrip(numbers.Get(i).size());
+                                    found = true;
+                                    break;
+                                }
+                            }
+                        }
+                        if (rest.size() == 0){
+                            word = buf2.str();
+                        }
+                    }
+                    // Vypise token
+                    // Tokeny vacsie ako 40 sa vyhadzuju
+                    Tokenizer tok3(LString(word),' ');
+                    while (tok3.next()){
+                        if (tok3.token().size() < 40){
+                            if (count == 0){
+                                os << ' ';
+                            }
+                            os << tok3.token();
+                            os << ' ';
+                            count += 1;
+                            last = tok2.token();
+                            char c = tok3.token().start()[0];
+                            if (c == '?' || c == '!' || c == '.' || c == ':'){
+                                os << endl;
                             }
                         }
                     }
-                    if (rest.size() == 0){
-                        word = buf2.str();
-                    }
                 }
-                // Vypise token
-                // Tokeny vacsie ako 40 sa vyhadzuju
-                Tokenizer tok3(LString(word),' ');
-                while (tok3.next()){
-                    if (tok3.token().size() < 40){
-                        if (count == 0){
-                            os << ' ';
-                        }
-                        os << tok3.token();
-                        os << ' ';
-                        count += 1;
-                        last = tok2.token();
-                        char c = tok3.token().start()[0];
-                        if (c == '?' || c == '!' || c == '.' || c == ':'){
-                            os << endl;
-                        }
-                    }
-                }
-            }
 
-            if (count == 0){
                 os << endl;
-            }    
-            //os << count;
-            //os << endl;
-            //os << endl;
+                //os << count;
+                //os << endl;
+                //os << endl;
+            }
         }
     }
 };
