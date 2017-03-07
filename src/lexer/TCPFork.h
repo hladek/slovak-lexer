@@ -119,6 +119,8 @@ class TCPFork {
                             stringstream os;
                             annot->annotate((char*)buf.data(),buf.size(),os);
                             out.push_front(os.str());
+                            // Processing cannot give SPECIAL marker
+                            assert(os.str().size() > 0);
 #ifndef NDEBUG
                             cout << "Processed " << out.front().size() << endl;
 
