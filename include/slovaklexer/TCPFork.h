@@ -43,6 +43,11 @@ class Annotator {
 
 class TCPFork {
     public:
+        static log(const char* msg){
+#ifndef NDEBUG
+            cout << msg << endl;
+#endif
+        }
         /* Signal handler to reap zombie processes */
         static void wait_for_child(int )
         {
@@ -50,10 +55,8 @@ class TCPFork {
         }
 
         static void handle(int newsock,Annotator* annot) {
-#ifndef NDEBUG
-            cout << "Handling" << endl;
-#endif
             struct timeval tv;
+            log("Handling");
 
 
             fd_set readfds;
@@ -71,26 +74,19 @@ class TCPFork {
             bool isclosing  =0;
             while(1){
                 if (!isclosing){
-#ifndef NDEBUG
-                    cout << "Listening read " << endl;
-#endif
+                    log("Listening read");
                     tv.tv_sec = 30;
                     tv.tv_usec = 0;
                     res = select(newsock + 1, &readfds, 0, NULL, &tv);
                     if (res <= 0){
-#ifndef NDEBUG
-                        cout << "Select error or timeout " << res  << endl;
-#endif
+                        log("Select error or timeout ");
                         break;
                     }
                     if (FD_ISSET(newsock, &readfds)){
                         int shouldread = 0;
                         res = recv(newsock,&shouldread,4,0);
                         if (res < 0){
-
-#ifndef NDEBUG
-                            cout << "Read error" << res << endl;
-#endif
+                            log("Read header error");
                             break;
                         }
                         // Closed read stream
@@ -106,39 +102,42 @@ class TCPFork {
                             buf.resize(shouldread);
                             res = recv(newsock,buf.data(),buf.size(),0);
                             if (res <= 0){
-
-#ifndef NDEBUG
-                                cout << "Read error " << res << endl;
-#endif
+                                stringstream ss;
+                                ss << "ead error " << res;
+                                log(ss.str().c_str());
                                 break;
                             }
 
-#ifndef NDEBUG
-                            cout << "Read " << res << endl;
-#endif
+                            stringstream ss;
+                            ss << "Read " << res;
+                            log(ss.str().c_str());
                             stringstream os;
                             annot->annotate((char*)buf.data(),buf.size(),os);
                             out.push_front(os.str());
+                            // TODO - Server error reporting
                             // Processing cannot give SPECIAL marker
-                            assert(os.str().size() > 0);
-#ifndef NDEBUG
-                            cout << "Processed " << out.front().size() << endl;
-
-#endif
+                            // assert(os.str().size() > 0);
+                            stringstream ss1;
+                            ss1 << "Processed " << out.front().size();
+                            log(ss1)
                         }
+                    }
+                    else{
+                        log("Cannot read");
+                        break;
                     }
                 }
                 if (out.size() > 0){
                     tv.tv_sec = 30;
                     tv.tv_usec = 0;
 #ifndef NDEBUG
-                    cout << "Listening write" << endl;
+                    log("Listening write");
 #endif
                     res = select(newsock + 1, 0, &writefds, NULL, &tv);
                     if (res < 0){
-#ifndef NDEBUG
-                        cout << "Select error " << res << endl;
-#endif
+                        stringstream ss;
+                        ss << "Select error " << res << endl;
+                        log(ss.str().c_str());
                         break;
                     }
                     if (FD_ISSET(newsock, &writefds)){
@@ -146,39 +145,36 @@ class TCPFork {
                         res = send(newsock,&wsz ,4,0);
                         if (res <= 0){
 
-#ifndef NDEBUG
-                            cout << "Write error " << res << endl;
-#endif
+                            stringstream ss;
+                            ss << "Write header error " << res << endl;
+                            log(ss.str().c_str());
                             break;
                         }
                         res = send(newsock,out.back().data(),(ssize_t)out.back().size(),0);
                         if (res <= 0){
-
-#ifndef NDEBUG
-                            cout << "Write error " << res << endl;
-#endif
+                            stringstream ss;
+                            ss << "Write error " << res << endl;
+                            log(ss.str().c_str());
                             break;
                         }
 
-#ifndef NDEBUG
-                        cout << "Written " << res<< endl;
-#endif
+                        stringstream ss;
+                        ss << "Writen " << res << endl;
+                        log(ss.str().c_str());
                         out.pop_back();
+                    }
+                    else{
+                        log("Cannot write");
+                        break;
                     }
                 }
                 if (isclosing && out.size() == 0){
-#ifndef NDEBUG
-                        cout << "All sent, quit" << endl;
-#endif
-
+                    log("All sent, quit" );
                     break;
                 }
             }
             close(newsock);
-
-#ifndef NDEBUG
-            cout << "Close" << endl;
-#endif
+            log("Closed");
         }
 
 
