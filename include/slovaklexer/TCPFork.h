@@ -43,7 +43,7 @@ class Annotator {
 
 class TCPFork {
     public:
-        static log(const char* msg){
+        static void log(const char* msg){
 #ifndef NDEBUG
             cout << msg << endl;
 #endif
@@ -91,10 +91,12 @@ class TCPFork {
                         }
                         // Closed read stream
                         if (res == 0){
+                            log("Closed read stream");
                             isclosing = true;
                         }
                         // Empty message
                         else if (shouldread == 0){
+                            log("Read zero in header");
                             out.push_front("");
                         }
                         else {
@@ -103,7 +105,7 @@ class TCPFork {
                             res = recv(newsock,buf.data(),buf.size(),0);
                             if (res <= 0){
                                 stringstream ss;
-                                ss << "ead error " << res;
+                                ss << "read error " << res;
                                 log(ss.str().c_str());
                                 break;
                             }
@@ -119,7 +121,7 @@ class TCPFork {
                             // assert(os.str().size() > 0);
                             stringstream ss1;
                             ss1 << "Processed " << out.front().size();
-                            log(ss1)
+                            log(ss1.str().c_str());
                         }
                     }
                     else{
@@ -144,7 +146,6 @@ class TCPFork {
                         int wsz = (int)out.back().size();
                         res = send(newsock,&wsz ,4,0);
                         if (res <= 0){
-
                             stringstream ss;
                             ss << "Write header error " << res << endl;
                             log(ss.str().c_str());
