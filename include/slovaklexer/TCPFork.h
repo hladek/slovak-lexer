@@ -70,112 +70,117 @@ class TCPFork {
             int res = 0;
             vector<char> msg;
             vector<char> buf(2048);
-            deque<string> out;
-            bool isclosing  =0;
+            string out;
             while(1){
-                if (!isclosing){
-                    log("Listening read");
-                    tv.tv_sec = 30;
-                    tv.tv_usec = 0;
-                    res = select(newsock + 1, &readfds, 0, NULL, &tv);
-                    if (res <= 0){
-                        log("Select error or timeout ");
+                log("Listening read");
+                tv.tv_sec = 30;
+                tv.tv_usec = 0;
+                res = select(newsock + 1, &readfds, 0, NULL, &tv);
+                if (res <= 0){
+                    log("Select error or timeout ");
+                    break;
+                }
+                if (FD_ISSET(newsock, &readfds)){
+                    int shouldread = 0;
+                    out = "";
+                    res = recv(newsock,&shouldread,4,0);
+                    // Closed read stream
+                    if (res == 0){
+                        log("Closed read stream");
                         break;
                     }
-                    if (FD_ISSET(newsock, &readfds)){
-                        int shouldread = 0;
-                        res = recv(newsock,&shouldread,4,0);
-                        if (res < 0){
-                            log("Read header error");
-                            break;
-                        }
-                        // Closed read stream
-                        if (res == 0){
-                            log("Closed read stream");
-                            isclosing = true;
-                        }
-                        // Empty message
-                        else if (shouldread == 0){
-                            log("Read zero in header");
-                            out.push_front("");
-                        }
-                        else if (shouldread > 0){
-                            buf.resize(shouldread);
-                            res = recv(newsock,buf.data(),buf.size(),0);
+                    // TODO Can rec be less thatn 4 ?
+                    else if (res != 4){
+                        log("Read header error");
+                        break;
+                    }
+                    // Empty message
+                    else if (shouldread == 0){
+                        log("Read zero in header");
+                        buf.resize(0);
+                    }
+                    else if (shouldread > 0){
+                        buf.resize(shouldread);
+                        int r = 0;
+                        while (r < shouldread){
+                            res = recv(newsock,buf.data() + r,shouldread - r,0);
                             if (res <= 0){
                                 stringstream ss;
                                 ss << "read error " << res;
                                 log(ss.str().c_str());
                                 break;
                             }
-
-                            stringstream ss;
-                            ss << "Read " << res;
-                            log(ss.str().c_str());
-                            stringstream os;
-                            annot->annotate((char*)buf.data(),buf.size(),os);
-                            out.push_front(os.str());
-                            // TODO - Server error reporting
-                            // Processing cannot give SPECIAL marker
-                            // assert(os.str().size() > 0);
-                            stringstream ss1;
-                            ss1 << "Processed " << out.front().size();
-                            log(ss1.str().c_str());
+                            r += res;
                         }
-                        else {
-                            log("???");
-                            abort();
+                        if (r != shouldread){
+                            log("message size error");
+                            break;
                         }
+                        stringstream ss;
+                        ss << "Read " << res;
+                        log(ss.str().c_str());
+                        stringstream os;
+                        annot->annotate((char*)buf.data(),buf.size(),os);
+                        vector<char> empty;
+                        buf.swap(empty);
+                        out = os.str();
+                        // TODO - Server error reporting
+                        // Processing cannot give SPECIAL marker
+                        // assert(os.str().size() > 0);
+                        log(out.c_str());
                     }
-                    else{
-                        log("Cannot read");
-                        break;
+                    else {
+                        log("???");
+                        abort();
                     }
                 }
-                if (out.size() >= 0){
-                    tv.tv_sec = 30;
-                    tv.tv_usec = 0;
+                else{
+                    log("Cannot read");
+                    break;
+                }
+            
 #ifndef NDEBUG
-                    log("Listening write");
+                log("Listening write");
 #endif
-                    res = select(newsock + 1, 0, &writefds, NULL, &tv);
-                    if (res < 0){
+                tv.tv_sec = 30;
+                tv.tv_usec = 0;
+                res = select(newsock + 1, 0, &writefds, NULL, &tv);
+                if (res < 0){
+                    stringstream ss;
+                    ss << "Select error " << res << endl;
+                    log(ss.str().c_str());
+                    break;
+                }
+                if (FD_ISSET(newsock, &writefds)){
+                    int wsz = out.size() + 1; // One is zero at end
+                    res = send(newsock,&wsz ,4,0);
+                    if (res <= 0){
                         stringstream ss;
-                        ss << "Select error " << res << endl;
+                        ss << "Write header error " << res << endl;
                         log(ss.str().c_str());
                         break;
                     }
-                    if (FD_ISSET(newsock, &writefds)){
-                        int wsz = (int)out.back().size();
-                        res = send(newsock,&wsz ,4,0);
+                    int sent = 0;
+                    while (sent < wsz){
+                        res = send(newsock,out.data() + sent,wsz-sent,0);
                         if (res <= 0){
                             stringstream ss;
-                            ss << "Write header error " << res << endl;
+                            ss << "Write error " << res << endl;
                             log(ss.str().c_str());
                             break;
                         }
-                        if (wsz > 0){
-                            res = send(newsock,out.back().data(),wsz,0);
-                            if (res <= 0){
-                                stringstream ss;
-                                ss << "Write error " << res << endl;
-                                log(ss.str().c_str());
-                                break;
-                            }
-
-                            stringstream ss;
-                            ss << "Writen " << res << endl;
-                            log(ss.str().c_str());
-                        }
-                        out.pop_back();
+                        sent += res;
                     }
-                    else{
-                        log("Cannot write");
+                    stringstream ss;
+                    ss << "Writen " << res << endl;
+                    log(ss.str().c_str());
+                    if(sent != wsz){
+                        log("Write size error");
                         break;
                     }
                 }
-                if (isclosing && out.size() == 0){
-                    log("All sent, quit" );
+                else{
+                    log("Cannot write");
                     break;
                 }
             }
