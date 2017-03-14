@@ -1,5 +1,5 @@
 
-#line 1 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 1 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 /*
  * 
  *
@@ -14,11 +14,11 @@
 #include "UTokenizer.h"
 
 
-#line 54 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 54 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 
 
 
-#line 22 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
+#line 22 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
 static const char _slovakparser_actions[] = {
 	0, 1, 0, 1, 1, 1, 13, 1, 
 	14, 1, 15, 1, 16, 1, 17, 1, 
@@ -609,7 +609,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	181u, 186u, 128u, 150u, 152u, 182u, 184u, 191u, 
 	128u, 191u, 165u, 128u, 255u, 187u, 192u, 255u, 
 	132u, 134u, 135u, 137u, 138u, 140u, 177u, 179u, 
-	191u, 0u, 127u, 148u, 185u, 255u, 128u, 129u, 
+	191u, 128u, 255u, 148u, 185u, 255u, 128u, 129u, 
 	160u, 164u, 133u, 176u, 179u, 182u, 183u, 186u, 
 	189u, 134u, 140u, 136u, 138u, 142u, 161u, 163u, 
 	255u, 182u, 192u, 255u, 128u, 129u, 138u, 191u, 
@@ -938,7 +938,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	48u, 57u, 161u, 101u, 116u, 115u, 114u, 121u, 
 	114u, 105u, 32u, 46u, 195u, 173u, 115u, 108u, 
 	111u, 170u, 181u, 186u, 128u, 150u, 152u, 182u, 
-	184u, 191u, 128u, 191u, 0u, 127u, 187u, 192u, 
+	184u, 191u, 128u, 191u, 128u, 255u, 187u, 192u, 
 	255u, 132u, 134u, 135u, 137u, 138u, 140u, 177u, 
 	179u, 191u, 148u, 185u, 255u, 128u, 129u, 160u, 
 	164u, 133u, 176u, 179u, 182u, 183u, 186u, 189u, 
@@ -1163,7 +1163,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	132u, 138u, 144u, 146u, 255u, 166u, 167u, 129u, 
 	155u, 187u, 149u, 181u, 143u, 175u, 137u, 169u, 
 	131u, 140u, 255u, 170u, 181u, 186u, 128u, 150u, 
-	152u, 182u, 184u, 191u, 128u, 191u, 0u, 127u, 
+	152u, 182u, 184u, 191u, 128u, 191u, 128u, 255u, 
 	187u, 192u, 255u, 132u, 134u, 135u, 137u, 138u, 
 	140u, 177u, 179u, 191u, 148u, 185u, 255u, 128u, 
 	129u, 160u, 164u, 133u, 176u, 179u, 182u, 183u, 
@@ -1389,7 +1389,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	167u, 129u, 155u, 187u, 149u, 181u, 143u, 175u, 
 	137u, 169u, 131u, 140u, 255u, 170u, 181u, 186u, 
 	128u, 150u, 152u, 182u, 184u, 191u, 128u, 191u, 
-	0u, 127u, 187u, 192u, 255u, 132u, 134u, 135u, 
+	128u, 255u, 187u, 192u, 255u, 132u, 134u, 135u, 
 	137u, 138u, 140u, 177u, 179u, 191u, 148u, 185u, 
 	255u, 128u, 129u, 160u, 164u, 133u, 176u, 179u, 
 	182u, 183u, 186u, 189u, 134u, 140u, 136u, 138u, 
@@ -1422,7 +1422,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	166u, 167u, 129u, 155u, 187u, 149u, 181u, 143u, 
 	175u, 137u, 169u, 131u, 140u, 255u, 170u, 181u, 
 	186u, 128u, 150u, 152u, 182u, 184u, 191u, 128u, 
-	191u, 128u, 255u, 187u, 192u, 255u, 132u, 134u, 
+	191u, 0u, 127u, 187u, 192u, 255u, 132u, 134u, 
 	135u, 137u, 138u, 140u, 177u, 179u, 191u, 148u, 
 	185u, 255u, 128u, 129u, 160u, 164u, 133u, 176u, 
 	179u, 182u, 183u, 186u, 189u, 134u, 140u, 136u, 
@@ -1723,7 +1723,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	138u, 144u, 146u, 255u, 166u, 167u, 129u, 155u, 
 	187u, 149u, 181u, 143u, 175u, 137u, 169u, 131u, 
 	140u, 255u, 170u, 181u, 186u, 128u, 150u, 152u, 
-	182u, 184u, 191u, 128u, 191u, 0u, 127u, 187u, 
+	182u, 184u, 191u, 128u, 191u, 128u, 255u, 187u, 
 	192u, 255u, 132u, 134u, 135u, 137u, 138u, 140u, 
 	177u, 179u, 191u, 148u, 185u, 255u, 128u, 129u, 
 	160u, 164u, 133u, 176u, 179u, 182u, 183u, 186u, 
@@ -3229,8 +3229,8 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	207u, 208u, 209u, 210u, 211u, 212u, 213u, 214u, 
 	225u, 226u, 234u, 239u, 240u, 65u, 90u, 97u, 
 	122u, 197u, 200u, 187u, 192u, 255u, 132u, 134u, 
-	135u, 137u, 138u, 140u, 177u, 179u, 191u, 128u, 
-	255u, 148u, 185u, 255u, 128u, 129u, 160u, 164u, 
+	135u, 137u, 138u, 140u, 177u, 179u, 191u, 0u, 
+	127u, 148u, 185u, 255u, 128u, 129u, 160u, 164u, 
 	133u, 176u, 179u, 182u, 183u, 186u, 189u, 134u, 
 	140u, 136u, 138u, 142u, 161u, 163u, 255u, 182u, 
 	192u, 255u, 128u, 129u, 138u, 191u, 128u, 191u, 
@@ -3680,7 +3680,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	212u, 213u, 214u, 225u, 226u, 234u, 239u, 240u, 
 	65u, 90u, 97u, 122u, 197u, 200u, 187u, 192u, 
 	255u, 132u, 134u, 135u, 137u, 138u, 140u, 177u, 
-	179u, 191u, 0u, 127u, 148u, 185u, 255u, 128u, 
+	179u, 191u, 128u, 255u, 148u, 185u, 255u, 128u, 
 	129u, 160u, 164u, 133u, 176u, 179u, 182u, 183u, 
 	186u, 189u, 134u, 140u, 136u, 138u, 142u, 161u, 
 	163u, 255u, 182u, 192u, 255u, 128u, 129u, 138u, 
@@ -3984,7 +3984,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	196u, 198u, 199u, 201u, 202u, 203u, 205u, 206u, 
 	207u, 208u, 209u, 210u, 211u, 212u, 213u, 214u, 
 	225u, 226u, 234u, 239u, 240u, 65u, 90u, 97u, 
-	122u, 197u, 200u, 128u, 255u, 187u, 192u, 255u, 
+	122u, 197u, 200u, 0u, 127u, 187u, 192u, 255u, 
 	132u, 134u, 135u, 137u, 138u, 140u, 177u, 179u, 
 	191u, 148u, 185u, 255u, 128u, 129u, 160u, 164u, 
 	133u, 176u, 179u, 182u, 183u, 186u, 189u, 134u, 
@@ -4520,7 +4520,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	132u, 138u, 144u, 146u, 255u, 166u, 167u, 129u, 
 	155u, 187u, 149u, 181u, 143u, 175u, 137u, 169u, 
 	131u, 140u, 255u, 170u, 181u, 186u, 128u, 150u, 
-	152u, 182u, 184u, 191u, 128u, 191u, 128u, 255u, 
+	152u, 182u, 184u, 191u, 128u, 191u, 0u, 127u, 
 	187u, 192u, 255u, 132u, 134u, 135u, 137u, 138u, 
 	140u, 177u, 179u, 191u, 148u, 185u, 255u, 128u, 
 	129u, 160u, 164u, 133u, 176u, 179u, 182u, 183u, 
@@ -4553,8 +4553,8 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	128u, 132u, 138u, 144u, 146u, 255u, 166u, 167u, 
 	129u, 155u, 187u, 149u, 181u, 143u, 175u, 137u, 
 	169u, 131u, 140u, 255u, 170u, 181u, 186u, 128u, 
-	150u, 152u, 182u, 184u, 191u, 128u, 191u, 128u, 
-	255u, 187u, 192u, 255u, 132u, 134u, 135u, 137u, 
+	150u, 152u, 182u, 184u, 191u, 128u, 191u, 0u, 
+	127u, 187u, 192u, 255u, 132u, 134u, 135u, 137u, 
 	138u, 140u, 177u, 179u, 191u, 148u, 185u, 255u, 
 	128u, 129u, 160u, 164u, 133u, 176u, 179u, 182u, 
 	183u, 186u, 189u, 134u, 140u, 136u, 138u, 142u, 
@@ -4837,7 +4837,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	208u, 209u, 210u, 211u, 212u, 213u, 214u, 225u, 
 	226u, 234u, 239u, 240u, 65u, 90u, 97u, 122u, 
 	197u, 200u, 187u, 192u, 255u, 132u, 134u, 135u, 
-	137u, 138u, 140u, 177u, 179u, 191u, 0u, 127u, 
+	137u, 138u, 140u, 177u, 179u, 191u, 128u, 255u, 
 	148u, 185u, 255u, 128u, 129u, 160u, 164u, 133u, 
 	176u, 179u, 182u, 183u, 186u, 189u, 134u, 140u, 
 	136u, 138u, 142u, 161u, 163u, 255u, 182u, 192u, 
@@ -4869,7 +4869,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	138u, 144u, 146u, 255u, 166u, 167u, 129u, 155u, 
 	187u, 149u, 181u, 143u, 175u, 137u, 169u, 131u, 
 	140u, 255u, 170u, 181u, 186u, 128u, 150u, 152u, 
-	182u, 184u, 191u, 128u, 191u, 128u, 255u, 187u, 
+	182u, 184u, 191u, 128u, 191u, 0u, 127u, 187u, 
 	192u, 255u, 132u, 134u, 135u, 137u, 138u, 140u, 
 	177u, 179u, 191u, 148u, 185u, 255u, 128u, 129u, 
 	160u, 164u, 133u, 176u, 179u, 182u, 183u, 186u, 
@@ -5063,7 +5063,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	214u, 225u, 226u, 234u, 239u, 240u, 65u, 90u, 
 	97u, 122u, 197u, 200u, 187u, 192u, 255u, 132u, 
 	134u, 135u, 137u, 138u, 140u, 177u, 179u, 191u, 
-	128u, 255u, 148u, 185u, 255u, 128u, 129u, 160u, 
+	0u, 127u, 148u, 185u, 255u, 128u, 129u, 160u, 
 	164u, 133u, 176u, 179u, 182u, 183u, 186u, 189u, 
 	134u, 140u, 136u, 138u, 142u, 161u, 163u, 255u, 
 	182u, 192u, 255u, 128u, 129u, 138u, 191u, 128u, 
@@ -5094,8 +5094,8 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	128u, 132u, 138u, 144u, 146u, 255u, 166u, 167u, 
 	129u, 155u, 187u, 149u, 181u, 143u, 175u, 137u, 
 	169u, 131u, 140u, 255u, 170u, 181u, 186u, 128u, 
-	150u, 152u, 182u, 184u, 191u, 128u, 191u, 128u, 
-	255u, 187u, 192u, 255u, 132u, 134u, 135u, 137u, 
+	150u, 152u, 182u, 184u, 191u, 128u, 191u, 0u, 
+	127u, 187u, 192u, 255u, 132u, 134u, 135u, 137u, 
 	138u, 140u, 177u, 179u, 191u, 148u, 185u, 255u, 
 	128u, 129u, 160u, 164u, 133u, 176u, 179u, 182u, 
 	183u, 186u, 189u, 134u, 140u, 136u, 138u, 142u, 
@@ -5327,7 +5327,7 @@ static const unsigned char _slovakparser_trans_keys[] = {
 	208u, 209u, 210u, 211u, 212u, 213u, 214u, 225u, 
 	226u, 234u, 239u, 240u, 65u, 90u, 97u, 122u, 
 	197u, 200u, 170u, 181u, 186u, 128u, 150u, 152u, 
-	182u, 184u, 191u, 128u, 191u, 128u, 255u, 187u, 
+	182u, 184u, 191u, 128u, 191u, 0u, 127u, 187u, 
 	192u, 255u, 132u, 134u, 135u, 137u, 138u, 140u, 
 	177u, 179u, 191u, 148u, 185u, 255u, 128u, 129u, 
 	160u, 164u, 133u, 176u, 179u, 182u, 183u, 186u, 
@@ -6953,7 +6953,7 @@ static const short _slovakparser_indicies[] = {
 	23, 24, 1, 1, 0, 1, 1, 1, 
 	0, 1, 1, 1, 0, 1, 0, 193, 
 	1, 0, 0, 0, 1, 1, 1, 1, 
-	1, 1, 0, 0, 1, 1, 0, 0, 
+	1, 1, 0, 1, 0, 1, 0, 0, 
 	1, 1, 1, 0, 1, 1, 1, 1, 
 	0, 1, 1, 1, 1, 1, 0, 0, 
 	1, 0, 1, 1, 1, 0, 1, 1, 
@@ -7287,7 +7287,7 @@ static const short _slovakparser_indicies[] = {
 	0, 692, 0, 686, 684, 693, 0, 694, 
 	0, 695, 0, 696, 0, 684, 0, 610, 
 	610, 610, 0, 610, 610, 610, 0, 610, 
-	0, 0, 610, 0, 0, 610, 610, 610, 
+	0, 610, 0, 0, 0, 610, 610, 610, 
 	610, 610, 610, 0, 610, 0, 0, 610, 
 	610, 610, 0, 610, 610, 610, 610, 0, 
 	610, 610, 610, 610, 610, 0, 0, 610, 
@@ -7495,7 +7495,7 @@ static const short _slovakparser_indicies[] = {
 	0, 0, 578, 0, 0, 578, 0, 0, 
 	578, 0, 0, 578, 0, 0, 578, 554, 
 	554, 554, 0, 554, 554, 554, 0, 554, 
-	0, 0, 554, 0, 0, 554, 554, 554, 
+	0, 554, 0, 0, 0, 554, 554, 554, 
 	554, 554, 554, 0, 554, 0, 0, 554, 
 	554, 554, 0, 554, 554, 554, 554, 0, 
 	554, 554, 554, 554, 554, 0, 0, 554, 
@@ -7703,7 +7703,7 @@ static const short _slovakparser_indicies[] = {
 	0, 0, 522, 0, 0, 522, 0, 0, 
 	522, 0, 0, 522, 0, 0, 522, 497, 
 	497, 497, 0, 497, 497, 497, 0, 497, 
-	0, 0, 497, 0, 0, 497, 497, 497, 
+	0, 497, 0, 0, 0, 497, 497, 497, 
 	497, 497, 497, 0, 497, 0, 0, 497, 
 	497, 497, 0, 497, 497, 497, 497, 0, 
 	497, 497, 497, 497, 497, 0, 0, 497, 
@@ -7733,7 +7733,7 @@ static const short _slovakparser_indicies[] = {
 	0, 497, 0, 0, 497, 0, 0, 497, 
 	0, 0, 497, 0, 0, 497, 474, 474, 
 	474, 441, 474, 474, 474, 441, 474, 441, 
-	474, 441, 441, 441, 474, 474, 474, 474, 
+	441, 474, 441, 441, 474, 474, 474, 474, 
 	474, 474, 441, 474, 441, 441, 474, 474, 
 	474, 441, 474, 474, 474, 474, 441, 474, 
 	474, 474, 474, 474, 441, 441, 474, 441, 
@@ -8019,7 +8019,7 @@ static const short _slovakparser_indicies[] = {
 	441, 441, 1084, 441, 441, 1084, 441, 441, 
 	1084, 441, 441, 1084, 441, 441, 1084, 1060, 
 	1060, 1060, 441, 1060, 1060, 1060, 441, 1060, 
-	441, 441, 1060, 441, 441, 1060, 1060, 1060, 
+	441, 1060, 441, 441, 441, 1060, 1060, 1060, 
 	1060, 1060, 1060, 441, 1060, 441, 441, 1060, 
 	1060, 1060, 441, 1060, 1060, 1060, 1060, 441, 
 	1060, 1060, 1060, 1060, 1060, 441, 441, 1060, 
@@ -9435,7 +9435,7 @@ static const short _slovakparser_indicies[] = {
 	2049, 2050, 2051, 2046, 2052, 2053, 2042, 2054, 
 	2055, 2056, 2057, 2058, 2059, 2060, 2061, 2039, 
 	2039, 2043, 441, 441, 441, 2007, 2007, 2007, 
-	2007, 2007, 2007, 441, 2007, 441, 2007, 441, 
+	2007, 2007, 2007, 441, 441, 2007, 2007, 441, 
 	441, 2007, 2007, 2007, 441, 2007, 2007, 2007, 
 	2007, 441, 2007, 2007, 2007, 2007, 2007, 441, 
 	441, 2007, 441, 2007, 2007, 2007, 441, 2007, 
@@ -9852,7 +9852,7 @@ static const short _slovakparser_indicies[] = {
 	2560, 2561, 2562, 2563, 2564, 2559, 2565, 2566, 
 	2555, 2567, 2568, 2569, 2570, 2571, 2572, 2573, 
 	2574, 2552, 2552, 2556, 1163, 1163, 1163, 2520, 
-	2520, 2520, 2520, 2520, 2520, 1163, 1163, 2520, 
+	2520, 2520, 2520, 2520, 2520, 1163, 2520, 1163, 
 	2520, 1163, 1163, 2520, 2520, 2520, 1163, 2520, 
 	2520, 2520, 2520, 1163, 2520, 2520, 2520, 2520, 
 	2520, 1163, 1163, 2520, 1163, 2520, 2520, 2520, 
@@ -10133,7 +10133,7 @@ static const short _slovakparser_indicies[] = {
 	1476, 1004, 1005, 1006, 1008, 1009, 1010, 1011, 
 	1012, 1013, 1014, 1015, 1010, 1016, 1017, 1006, 
 	1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 
-	1003, 1003, 1007, 441, 447, 441, 441, 441, 
+	1003, 1003, 1007, 441, 441, 447, 441, 441, 
 	447, 447, 447, 447, 447, 447, 441, 447, 
 	441, 441, 447, 447, 447, 441, 447, 447, 
 	447, 447, 441, 447, 447, 447, 447, 447, 
@@ -10638,7 +10638,7 @@ static const short _slovakparser_indicies[] = {
 	441, 441, 2990, 441, 441, 2990, 441, 441, 
 	2990, 441, 441, 2990, 441, 441, 2990, 2965, 
 	2965, 2965, 441, 2965, 2965, 2965, 441, 2965, 
-	441, 2965, 441, 441, 441, 2965, 2965, 2965, 
+	441, 441, 2965, 441, 441, 2965, 2965, 2965, 
 	2965, 2965, 2965, 441, 2965, 441, 441, 2965, 
 	2965, 2965, 441, 2965, 2965, 2965, 2965, 441, 
 	2965, 2965, 2965, 2965, 2965, 441, 441, 2965, 
@@ -10668,7 +10668,7 @@ static const short _slovakparser_indicies[] = {
 	441, 2965, 441, 441, 2965, 441, 441, 2965, 
 	441, 441, 2965, 441, 441, 2965, 2942, 2942, 
 	2942, 441, 2942, 2942, 2942, 441, 2942, 441, 
-	2942, 441, 441, 441, 2942, 2942, 2942, 2942, 
+	441, 2942, 441, 441, 2942, 2942, 2942, 2942, 
 	2942, 2942, 441, 2942, 441, 441, 2942, 2942, 
 	2942, 441, 2942, 2942, 2942, 2942, 441, 2942, 
 	2942, 2942, 2942, 2942, 441, 441, 2942, 441, 
@@ -10940,7 +10940,7 @@ static const short _slovakparser_indicies[] = {
 	3634, 3635, 3624, 3636, 3637, 3638, 3639, 3640, 
 	3641, 3642, 3643, 3621, 3621, 3625, 441, 441, 
 	441, 3589, 3589, 3589, 3589, 3589, 3589, 441, 
-	441, 3589, 3589, 441, 441, 3589, 3589, 3589, 
+	3589, 441, 3589, 441, 441, 3589, 3589, 3589, 
 	441, 3589, 3589, 3589, 3589, 441, 3589, 3589, 
 	3589, 3589, 3589, 441, 441, 3589, 441, 3589, 
 	3589, 3589, 441, 3589, 441, 3589, 3589, 441, 
@@ -10969,7 +10969,7 @@ static const short _slovakparser_indicies[] = {
 	441, 3589, 441, 441, 3589, 441, 441, 3589, 
 	441, 441, 3589, 441, 441, 3589, 3565, 3565, 
 	3565, 441, 3565, 3565, 3565, 441, 3565, 441, 
-	3565, 441, 441, 441, 3565, 3565, 3565, 3565, 
+	441, 3565, 441, 441, 3565, 3565, 3565, 3565, 
 	3565, 3565, 441, 3565, 441, 441, 3565, 3565, 
 	3565, 441, 3565, 3565, 3565, 3565, 441, 3565, 
 	3565, 3565, 3565, 3565, 441, 441, 3565, 441, 
@@ -11148,7 +11148,7 @@ static const short _slovakparser_indicies[] = {
 	3578, 3579, 3568, 3580, 3581, 3582, 3583, 3584, 
 	3585, 3586, 3587, 3565, 3565, 3569, 441, 441, 
 	441, 3533, 3533, 3533, 3533, 3533, 3533, 441, 
-	3533, 441, 3533, 441, 441, 3533, 3533, 3533, 
+	441, 3533, 3533, 441, 441, 3533, 3533, 3533, 
 	441, 3533, 3533, 3533, 3533, 441, 3533, 3533, 
 	3533, 3533, 3533, 441, 441, 3533, 441, 3533, 
 	3533, 3533, 441, 3533, 441, 3533, 3533, 441, 
@@ -11177,7 +11177,7 @@ static const short _slovakparser_indicies[] = {
 	441, 3533, 441, 441, 3533, 441, 441, 3533, 
 	441, 441, 3533, 441, 441, 3533, 3508, 3508, 
 	3508, 441, 3508, 3508, 3508, 441, 3508, 441, 
-	3508, 441, 441, 441, 3508, 3508, 3508, 3508, 
+	441, 3508, 441, 441, 3508, 3508, 3508, 3508, 
 	3508, 3508, 441, 3508, 441, 441, 3508, 3508, 
 	3508, 441, 3508, 3508, 3508, 3508, 441, 3508, 
 	3508, 3508, 3508, 3508, 441, 441, 3508, 441, 
@@ -11400,7 +11400,7 @@ static const short _slovakparser_indicies[] = {
 	13, 14, 9, 15, 16, 5, 17, 18, 
 	19, 20, 21, 22, 23, 24, 1, 1, 
 	6, 4068, 1, 1, 1, 4068, 1, 1, 
-	1, 4068, 1, 4068, 1, 4068, 4068, 4068, 
+	1, 4068, 1, 4068, 4068, 1, 4068, 4068, 
 	1, 1, 1, 1, 1, 1, 4068, 1, 
 	4068, 4068, 1, 1, 1, 4068, 1, 1, 
 	1, 1, 4068, 1, 1, 1, 1, 1, 
@@ -13988,14 +13988,14 @@ static const int slovakparser_error = -1;
 static const int slovakparser_en_main = 3957;
 
 
-#line 57 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 57 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 
 class Ulice : public RagelProcessor{
 
 public:
 	Ulice() {
 		
-#line 13999 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
+#line 13999 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
 	{
 	cs = slovakparser_start;
 	ts = 0;
@@ -14003,7 +14003,7 @@ public:
 	act = 0;
 	}
 
-#line 63 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 63 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	}
 	
 	
@@ -14039,7 +14039,7 @@ public:
 	
 	virtual void call_ragel(ostream& out){
 		
-#line 14043 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
+#line 14043 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
 	{
 	int _klen;
 	unsigned int _trans;
@@ -14058,7 +14058,7 @@ _resume:
 #line 1 "NONE"
 	{ts = p;}
 	break;
-#line 14062 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
+#line 14062 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
 		}
 	}
 
@@ -14129,163 +14129,163 @@ _eof_trans:
 	{te = p+1;}
 	break;
 	case 3:
-#line 40 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 40 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{act = 1;}
 	break;
 	case 4:
-#line 41 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 41 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{act = 2;}
 	break;
 	case 5:
-#line 42 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 42 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{act = 3;}
 	break;
 	case 6:
-#line 43 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 43 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{act = 4;}
 	break;
 	case 7:
-#line 44 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 44 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{act = 5;}
 	break;
 	case 8:
-#line 45 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 45 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{act = 6;}
 	break;
 	case 9:
-#line 46 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 46 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{act = 7;}
 	break;
 	case 10:
-#line 47 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 47 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{act = 8;}
 	break;
 	case 11:
-#line 48 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 48 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{act = 9;}
 	break;
 	case 12:
-#line 50 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 50 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{act = 10;}
 	break;
 	case 13:
-#line 40 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 40 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL1>",2);}}
 	break;
 	case 14:
-#line 41 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 41 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL5>",2);}}
 	break;
 	case 15:
-#line 42 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 42 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL1>",1);}}
 	break;
 	case 16:
-#line 43 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 43 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 17:
-#line 44 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 44 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 18:
-#line 45 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 45 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 19:
-#line 46 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 46 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL2>",0);}}
 	break;
 	case 20:
-#line 47 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 47 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL5>",1);}}
 	break;
 	case 21:
-#line 48 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 48 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p+1;{ add_street(out,ts,te,"<UL5>",0);}}
 	break;
 	case 22:
-#line 50 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 50 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p+1;{ out << *ts;}}
 	break;
 	case 23:
-#line 40 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 40 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL1>",2);}}
 	break;
 	case 24:
-#line 41 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 41 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL5>",2);}}
 	break;
 	case 25:
-#line 42 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 42 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL1>",1);}}
 	break;
 	case 26:
-#line 43 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 43 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 27:
-#line 44 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 44 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 28:
-#line 45 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 45 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 29:
-#line 46 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 46 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL2>",0);}}
 	break;
 	case 30:
-#line 47 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 47 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL5>",1);}}
 	break;
 	case 31:
-#line 48 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 48 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p;p--;{ add_street(out,ts,te,"<UL5>",0);}}
 	break;
 	case 32:
-#line 50 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 50 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{te = p;p--;{ out << *ts;}}
 	break;
 	case 33:
-#line 40 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 40 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL1>",2);}}
 	break;
 	case 34:
-#line 41 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 41 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL5>",2);}}
 	break;
 	case 35:
-#line 42 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 42 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL1>",1);}}
 	break;
 	case 36:
-#line 43 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 43 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 37:
-#line 44 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 44 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 38:
-#line 45 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 45 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL1>",0);}}
 	break;
 	case 39:
-#line 46 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 46 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL2>",0);}}
 	break;
 	case 40:
-#line 47 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 47 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL5>",1);}}
 	break;
 	case 41:
-#line 48 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 48 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{{p = ((te))-1;}{ add_street(out,ts,te,"<UL5>",0);}}
 	break;
 	case 42:
-#line 50 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 50 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	{{p = ((te))-1;}{ out << *ts;}}
 	break;
 	case 43:
@@ -14324,7 +14324,7 @@ _eof_trans:
 	}
 	}
 	break;
-#line 14328 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
+#line 14328 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
 		}
 	}
 
@@ -14337,7 +14337,7 @@ _again:
 #line 1 "NONE"
 	{ts = 0;}
 	break;
-#line 14341 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
+#line 14341 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h"
 		}
 	}
 
@@ -14354,7 +14354,7 @@ _again:
 
 	}
 
-#line 98 "/home/dano/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
+#line 98 "/home/hladek/apps/github/slovak-lexer/include/slovaklexer/Ulice.h.rl"
 	}
 	
 };

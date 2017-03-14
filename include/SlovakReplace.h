@@ -105,7 +105,7 @@ private:
         wordids.push_back(con);
 
         //assert(wordids.size() > 0 && wordids.size() <= MAXORDER);
-        if (wordids.size() <= MAXORDER)
+        if (wordids.size() <= (size_t)MAXORDER)
             rules[wordids.size() - 2]->insert(wordids.data());
         //cout << string(tok.startToken,tok.tokenSize) << endl;
         //cout << con << endl;
@@ -151,7 +151,7 @@ public:
             if (tok.next()) {
                 int con = vocab.Add(tok.token());
                 wordids.push_back(con);
-                if (wordids.size() <= MAXORDER)
+                if (wordids.size() <= (size_t)MAXORDER)
                     rules[wordids.size() - 2]->insert(wordids.data());
             } else {
                 continue;
