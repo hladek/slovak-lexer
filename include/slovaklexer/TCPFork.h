@@ -99,8 +99,7 @@ class TCPFork {
                             log("Read zero in header");
                             out.push_front("");
                         }
-                        else {
-                            assert(shouldread > 0);
+                        else if (shouldread > 0){
                             buf.resize(shouldread);
                             res = recv(newsock,buf.data(),buf.size(),0);
                             if (res <= 0){
@@ -123,13 +122,17 @@ class TCPFork {
                             ss1 << "Processed " << out.front().size();
                             log(ss1.str().c_str());
                         }
+                        else {
+                            log("???");
+                            abort();
+                        }
                     }
                     else{
                         log("Cannot read");
                         break;
                     }
                 }
-                if (out.size() > 0){
+                if (out.size() >= 0){
                     tv.tv_sec = 30;
                     tv.tv_usec = 0;
 #ifndef NDEBUG
@@ -151,17 +154,19 @@ class TCPFork {
                             log(ss.str().c_str());
                             break;
                         }
-                        res = send(newsock,out.back().data(),(ssize_t)out.back().size(),0);
-                        if (res <= 0){
-                            stringstream ss;
-                            ss << "Write error " << res << endl;
-                            log(ss.str().c_str());
-                            break;
-                        }
+                        if (wsz > 0){
+                            res = send(newsock,out.back().data(),wsz,0);
+                            if (res <= 0){
+                                stringstream ss;
+                                ss << "Write error " << res << endl;
+                                log(ss.str().c_str());
+                                break;
+                            }
 
-                        stringstream ss;
-                        ss << "Writen " << res << endl;
-                        log(ss.str().c_str());
+                            stringstream ss;
+                            ss << "Writen " << res << endl;
+                            log(ss.str().c_str());
+                        }
                         out.pop_back();
                     }
                     else{
