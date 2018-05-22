@@ -28,6 +28,7 @@ int main(int argc, char **argv) {
         LineTokenizer lt(cin);
         while (lt.next()){
             r.annotate(lt.token(),cout);
+            cout << endl;
         }
     }
 

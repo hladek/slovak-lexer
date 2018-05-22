@@ -42,6 +42,7 @@ int main(int argc, char **argv) {
         LineTokenizer lt(cin);
         while (lt.next()){
             r.annotate_line(lt.token().start(),cout);
+            cout << endl;
         }
 #ifdef NETWORKING_ENABLED
     }
