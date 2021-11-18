@@ -3,7 +3,8 @@ cmake_minimum_required(VERSION 2.6)
 set(CMAKE_CXX_FLAGS "-Wall -static-libstdc++ -static-libgcc")
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
-add_subdirectory(lemonstring)
+add_subdirectory(lemonstring/include)
+add_subdirectory(lemonstring/src)
 add_subdirectory(include)
 add_subdirectory(src)
 

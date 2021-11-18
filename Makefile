@@ -1,6 +1,6 @@
 bin:
 	mkdir bin
-	cd bin && cmake ../src
+	cd bin && cmake ../
 	cd bin && make
 install:	bin
 	cd bin && make install
