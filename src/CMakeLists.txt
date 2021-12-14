@@ -19,3 +19,7 @@ install(TARGETS cisloslovom DESTINATION bin)
 add_executable(ulice ulice.cpp)
 target_link_libraries(ulice lemonstring)
 add_dependencies(ulice uliceh)
+
+
+add_executable(dedup dedup.cpp)
+install(TARGETS dedup DESTINATION bin)
