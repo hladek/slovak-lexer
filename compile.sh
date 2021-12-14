@@ -1,3 +1,4 @@
 mkdir bin
-cd bin && cmake ../
-cd bin && make
+cd bin 
+cmake ../
+make
